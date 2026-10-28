@@ -1,0 +1,1474 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Targeted Client Lists Mockups</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500;600&display=swap">
+<style>
+/* LTS Targeted Client Lists P1 mockups. Tokens from Compass cx v4.2.1, same set as the Database Health mockups. */
+:root {
+  --sans: "Compass Sans", Helvetica, Arial, sans-serif;
+  --serif: "Compass Serif", "Source Serif 4", Georgia, serif;
+  --ink: #171717; --ink2: #333333; --ink3: #6C6C6C; --ink4: #8D8D8D;
+  --grey90: #4E4E4E; --line: #DADADA; --line-soft: #F4F4F4; --bg: #F4F4F4; --panel: #FFFFFF; --bg-soft: #FAFAFA;
+  --blue: #0064E5; --blue-hover: #0049A8; --blue-soft: #F0F6FF; --blue-100: #D1E5FF;
+  --red: #AE0917; --red-bg: #F8E3E4;
+  --green: #3AAC6F; --green-ink: #1E5839; --green-bg: #DDF3E7;
+  --amber: #B5840C; --amber-ink: #7A5806; --amber-bg: #FFF7DF;
+  --hyg: #1B39EF; --hyg-bg: #EEF1FE; --act: #14A4AD; --act-ink: #037A82; --act-bg: #E6F7F8;
+  --shadow: 0 1px 2px rgba(0,0,0,.04), 0 1px 1px rgba(0,0,0,.03);
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { margin: 0; }
+body { font-family: var(--sans); color: var(--ink); background: var(--bg); font-size: 14px; line-height: 1.45; -webkit-font-smoothing: antialiased; }
+a { color: var(--blue); text-decoration: none; }
+a:hover { color: var(--blue-hover); }
+button, input, select, textarea { font-family: inherit; }
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.num { font-variant-numeric: tabular-nums; }
+.tbd { color: var(--amber-ink); font-weight: 600; white-space: nowrap; }
+
+/* Shell */
+.app { display: flex; min-height: 100vh; }
+.left-nav { flex: 0 0 224px; width: 224px; background: #000; color: #C9C9C9; padding-bottom: 16px; position: sticky; top: 0; height: 100vh; overflow-y: auto; }
+.nav-head { display: flex; align-items: center; gap: 12px; padding: 20px; }
+.burger { width: 24px; height: 24px; padding: 0; border: 0; background: transparent; display: inline-flex; flex-direction: column; gap: 4px; align-items: center; justify-content: center; cursor: pointer; }
+.burger span { display: block; width: 16px; height: 1px; background: #fff; }
+.wordmark { color: #fff; font-size: 17px; font-weight: 700; letter-spacing: .22em; }
+.nl { display: flex; align-items: center; gap: 12px; padding: 4px 20px; min-height: 32px; color: #C9C9C9; font-size: 15px; line-height: 24px; }
+.nl:hover { background: rgba(255,255,255,.08); color: #fff; }
+.nl svg { flex-shrink: 0; }
+.nl.on { color: #fff; font-weight: 500; }
+.nc { display: block; padding: 4px 20px 4px 54px; color: #C9C9C9; font-size: 14px; line-height: 24px; }
+.nc:hover { background: rgba(255,255,255,.08); color: #fff; }
+.nc.on { color: #fff; font-weight: 500; background: rgba(255,255,255,.12); }
+.nav-div { height: 1px; background: var(--grey90); margin: 8px 22px; }
+.mobile-bar { display: none; background: #000; padding: 14px 16px; }
+main { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+
+.topbar { padding: 12px 32px; background: var(--panel); border-bottom: 1px solid var(--line); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; }
+.crumbs { font-size: 13px; color: var(--ink3); display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.crumbs b { color: var(--ink); font-weight: 600; }
+.tools { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.seg { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--line); border-radius: 19px; padding: 2px; background: #fff; }
+.seg a, .seg span, .seg button { padding: 5px 14px; border: 0; background: transparent; border-radius: 17px; color: var(--ink); font-size: 13px; font-weight: 500; cursor: pointer; }
+.seg .on, .seg [aria-pressed=true] { background: #000; color: #fff; }
+.fresh { display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 6px 0 12px; border: 1px solid var(--line); border-radius: 19px; font-size: 13px; color: var(--ink3); white-space: nowrap; }
+.fresh b { color: var(--ink); font-weight: 500; }
+.dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+.icon-btn { width: 28px; height: 28px; border: 0; border-radius: 50%; background: transparent; color: var(--blue); display: inline-flex; align-items: center; justify-content: center; cursor: pointer; }
+.icon-btn:hover { background: var(--blue-soft); }
+.icon-btn.spin svg { animation: spin .8s linear infinite; }
+.icon-btn[aria-disabled=true] { cursor: progress; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.page-head { padding: 24px 32px 20px; background: var(--panel); border-bottom: 1px solid var(--line); display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px; }
+h1.title { margin: 6px 0 0; font-family: var(--serif); font-size: 28px; font-weight: 600; letter-spacing: -.01em; }
+.page-sub { margin-top: 4px; font-size: 13px; color: var(--ink3); max-width: 680px; }
+.page-sub b { color: var(--ink); }
+.body { padding: 24px 32px 32px; display: flex; flex-direction: column; gap: 16px; }
+
+/* Buttons */
+.btn { display: inline-flex; align-items: center; gap: 6px; padding: 6px 16px; border: 1px solid var(--blue); border-radius: 2px; background: var(--blue); color: #fff; font-size: 14px; font-weight: 500; line-height: 1.3; white-space: nowrap; cursor: pointer; }
+.btn:hover { background: var(--blue-hover); border-color: var(--blue-hover); color: #fff; }
+.btn-ghost { display: inline-flex; align-items: center; gap: 6px; padding: 6px 16px; border: 1px solid var(--line); border-radius: 2px; background: #fff; color: var(--ink); font-size: 14px; font-weight: 500; line-height: 1.3; white-space: nowrap; cursor: pointer; }
+.btn-ghost:hover { background: var(--line-soft); color: var(--blue); }
+.btn-red { display: inline-flex; align-items: center; gap: 6px; padding: 6px 16px; border: 1px solid var(--red); border-radius: 2px; background: var(--red); color: #fff; font-size: 14px; font-weight: 500; line-height: 1.3; white-space: nowrap; cursor: pointer; }
+.btn-red:hover { background: #8A0712; }
+.btn-sm { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; border: 1px solid var(--blue); border-radius: 2px; background: #fff; color: var(--blue); font-size: 12px; font-weight: 600; cursor: pointer; }
+.btn-sm:hover { background: var(--blue-soft); }
+.btn-sm.muted { border-color: var(--line); color: var(--grey90); }
+.pillf { height: 32px; padding: 0 12px; border: 1px solid var(--line); border-radius: 19px; background: #fff; color: var(--ink); font-size: 13px; font-weight: 500; display: inline-flex; align-items: center; gap: 8px; cursor: pointer; white-space: nowrap; }
+.pillf:hover { background: var(--line-soft); }
+.pillf .l { color: var(--ink3); font-weight: 400; }
+.pillf select { border: 0; background: transparent; font-size: 13px; font-weight: 600; color: var(--ink); cursor: pointer; padding: 2px 0; }
+.chip { display: block; width: 100%; padding: 7px 12px; border: 1px solid var(--line); border-radius: 19px; background: #fff; color: var(--ink); font-size: 13px; text-align: left; cursor: pointer; }
+.chip:hover { background: var(--line-soft); }
+.lnk { border: 0; background: none; padding: 0; color: var(--blue); font-size: 13px; font-weight: 500; cursor: pointer; }
+.lnk:hover { color: var(--blue-hover); text-decoration: underline; }
+
+/* Cards */
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 24px; box-shadow: var(--shadow); min-width: 0; }
+.card.flush { padding: 0; overflow: hidden; }
+.card-head { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+h2.ct { margin: 0; font-size: 16px; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+.cs { font-size: 13px; color: var(--ink3); margin-top: 2px; }
+.wrap { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start; }
+.f2 { flex: 2 1 560px; }
+.f1 { flex: 1 1 300px; }
+.kpi-label { font-size: 12px; font-weight: 500; color: var(--ink3); text-transform: uppercase; letter-spacing: .04em; margin: 0; }
+.pill { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 12px; text-transform: uppercase; letter-spacing: .04em; white-space: nowrap; }
+.pill.sm { font-size: 10px; padding: 1px 6px; border-radius: 8px; }
+.t-red { background: var(--red-bg); color: var(--red); }
+.t-amber { background: var(--amber-bg); color: var(--amber-ink); }
+.t-green { background: var(--green-bg); color: var(--green-ink); }
+.t-grey { background: var(--line-soft); color: var(--ink3); }
+.t-hyg { background: var(--hyg-bg); color: var(--hyg); }
+.t-act { background: var(--act-bg); color: var(--act-ink); }
+.t-blue { background: var(--blue-soft); color: var(--blue-hover); }
+.bar { height: 8px; border-radius: 4px; background: var(--line-soft); overflow: hidden; display: flex; }
+.bar > span { display: block; height: 100%; }
+.bar.thin { height: 4px; }
+.ai-say { background: var(--blue-soft); border-radius: 8px; padding: 12px 14px; font-size: 13px; }
+.ai-say .k { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; color: var(--blue-hover); margin-bottom: 4px; display: flex; align-items: center; gap: 6px; }
+.field { width: 100%; min-width: 0; height: 36px; padding: 0 12px; border: 1px solid var(--line); border-radius: 4px; font-size: 13px; background: #fff; color: var(--ink); }
+.field:focus { outline: 2px solid var(--blue); outline-offset: -1px; }
+.field[aria-invalid=true] { border-color: var(--red); }
+textarea.field { height: auto; min-height: 84px; padding: 8px 12px; resize: vertical; line-height: 1.45; }
+.notice { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; border-radius: 8px; padding: 14px 18px; font-size: 13px; }
+.notice.blue { background: var(--blue-soft); border: 1px solid var(--blue-100); }
+.notice.plain { background: #fff; border: 1px solid var(--line); align-items: flex-start; flex-wrap: nowrap; padding: 12px 16px; }
+.notice.amber { background: var(--amber-bg); border: 1px solid #F1DC9C; align-items: flex-start; flex-wrap: nowrap; }
+.help-row { padding: 10px 0; border-bottom: 1px solid var(--line-soft); }
+.help-row:last-child { border-bottom: 0; }
+.av { width: 32px; height: 32px; border-radius: 50%; background: var(--line-soft); display: inline-grid; place-items: center; font-size: 11px; font-weight: 600; flex-shrink: 0; color: var(--ink2); }
+.states { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 32px 24px; }
+.state { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.state > .card { flex: 1; }
+.toast-dark { background: var(--ink); color: #fff; border-radius: 8px; padding: 14px 16px; box-shadow: 0 4px 16px rgba(0,0,0,.25); }
+.ph-card { border-style: dashed; box-shadow: none; background: var(--bg-soft); }
+.ph-bar { height: 10px; border-radius: 5px; background: #E8E8E8; margin-top: 10px; }
+
+/* ===== Client list module ===== */
+.mod-head { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 12px 16px; padding: 20px 24px 16px; border-bottom: 1px solid var(--line); }
+.mod-tools { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.prog { display: flex; flex-direction: column; gap: 6px; min-width: 170px; margin-right: 4px; }
+.prog-t { font-size: 13px; color: var(--ink3); }
+.prog-t b { color: var(--ink); font-weight: 600; }
+ol.recs { list-style: none; margin: 0; padding: 0; }
+.rec { border-bottom: 1px solid var(--line-soft); }
+.rec:last-child { border-bottom: 0; }
+.rec-row { display: grid; grid-template-columns: 20px 32px minmax(0, 1fr) auto; gap: 4px 12px; padding: 14px 24px; align-items: start; }
+.rank { font-size: 12px; color: var(--ink3); font-weight: 600; padding-top: 7px; text-align: right; font-variant-numeric: tabular-nums; }
+.rec-main { min-width: 0; }
+.rec-top { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; }
+.rec-name { border: 0; background: none; padding: 0; font-size: 15px; font-weight: 600; color: var(--ink); cursor: pointer; text-align: left; line-height: 1.35; }
+.rec-name:hover { color: var(--blue); text-decoration: underline; }
+.rec-why { margin: 4px 0 0; font-size: 13px; color: var(--ink2); max-width: 660px; }
+.rec-why.na { color: var(--ink3); font-style: italic; }
+.rec-meta { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-top: 6px; font-size: 12px; color: var(--ink3); align-items: center; }
+.meta-i { display: inline-block; }
+.meta-i svg { vertical-align: -2px; margin-right: 4px; }
+.meta-i b { color: var(--ink2); font-weight: 600; }
+.sig { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 500; padding: 1px 8px 1px 6px; border-radius: 12px; white-space: nowrap; }
+.sig.sell { background: var(--act-bg); color: var(--act-ink); }
+.sig.buy { background: var(--hyg-bg); color: var(--hyg); }
+.tierx { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; color: var(--ink2); white-space: nowrap; }
+.tierx i { display: inline-block; width: 3px; background: var(--ink2); border-radius: 1px; }
+.tierx i.off { background: #CFCFCF; }
+.tierx .bars { display: inline-flex; align-items: flex-end; gap: 1px; height: 10px; }
+.rec-main { grid-column: 3 / 5; }
+.rec-acts { grid-column: 3 / 5; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; justify-content: flex-start; margin-top: 4px; }
+.rec.done .rec-main, .rec.dis .rec-main { grid-column: 3; }
+.rec.done .rec-acts, .rec.dis .rec-acts { grid-column: 4; grid-row: 1; justify-content: flex-end; margin-top: 0; }
+.act { display: inline-flex; align-items: center; gap: 5px; height: 32px; padding: 0 10px; border: 1px solid var(--line); border-radius: 2px; background: #fff; color: var(--ink); font-size: 13px; font-weight: 500; cursor: pointer; white-space: nowrap; }
+.act:hover { background: var(--blue-soft); border-color: var(--blue); color: var(--blue-hover); }
+.act.ico { width: 32px; padding: 0; justify-content: center; }
+.act.on, .act[aria-expanded=true] { background: var(--blue-soft); border-color: var(--blue); color: var(--blue-hover); }
+.act.chev svg { transition: transform .15s; }
+.act.chev[aria-expanded=true] svg { transform: rotate(180deg); }
+.state-lbl { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; color: var(--ink3); white-space: nowrap; }
+.rec.done .rec-row, .rec.dis .rec-row { background: var(--bg-soft); }
+.rec.done .rec-name, .rec.done .rec-why, .rec.dis .rec-name, .rec.dis .rec-why { color: var(--ink3); }
+.rec.done .av, .rec.dis .av { background: #EDEDED; color: var(--ink3); }
+.rec.dis .rec-name, .rec.dis .rec-why { text-decoration: line-through; }
+.rec.done .sig, .rec.dis .sig { background: #EDEDED; color: var(--ink3); }
+.rec.new .rec-row { animation: slidein .55s ease-out both; }
+.rec.new { background: linear-gradient(90deg, var(--blue) 0 3px, transparent 3px); }
+@keyframes slidein { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .rec.new .rec-row { animation: none; } .icon-btn.spin svg { animation: none; } }
+
+.panel { margin: 0 24px 16px 100px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+.xp { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px 24px; padding: 16px; }
+.xp h3 { margin: 0 0 8px; }
+.kv { display: grid; grid-template-columns: 18px minmax(0, 1fr); gap: 6px 8px; font-size: 13px; align-items: start; }
+.kv svg { color: var(--ink3); margin-top: 2px; }
+.kv a, .kv span { overflow-wrap: anywhere; }
+.acts-log { margin: 0; padding: 0; list-style: none; font-size: 13px; }
+.acts-log li { display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 8px; padding: 3px 0; }
+.acts-log .when { color: var(--ink3); font-size: 12px; padding-top: 1px; }
+.xp-sec { padding: 12px 16px; border-top: 1px solid var(--line-soft); font-size: 13px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; }
+.xp-foot { padding: 12px 16px; border-top: 1px solid var(--line); background: var(--bg-soft); border-radius: 0 0 8px 8px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; font-size: 12px; color: var(--ink3); }
+.xp-foot .src { display: inline-flex; align-items: center; gap: 6px; flex: 1 1 260px; }
+.flagged { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; color: var(--green-ink); font-size: 12px; font-weight: 500; }
+.task-box { display: flex; align-items: flex-start; gap: 10px; }
+.task-box .ti { width: 28px; height: 28px; border-radius: 4px; background: var(--amber-bg); color: var(--amber-ink); display: grid; place-items: center; flex-shrink: 0; }
+.mini-chip { border: 1px solid var(--line); background: #fff; border-radius: 14px; padding: 3px 10px; font-size: 12px; color: var(--ink); cursor: pointer; }
+.mini-chip:hover { background: var(--line-soft); }
+.mini-chip[aria-pressed=true] { background: var(--ink); border-color: var(--ink); color: #fff; }
+
+.callbar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 12px; background: var(--ink); color: #fff; border-radius: 8px 8px 0 0; padding: 12px 16px; }
+.callbar .sub { font-size: 12px; color: #C9C9C9; }
+.callbar .sp { flex: 1; }
+.live { width: 10px; height: 10px; border-radius: 50%; background: #4ADE80; box-shadow: 0 0 0 4px rgba(74,222,128,.25); flex-shrink: 0; }
+.bar-btn { display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 14px; border: 1px solid var(--grey90); border-radius: 2px; background: transparent; color: #fff; font-size: 13px; font-weight: 500; cursor: pointer; }
+.bar-btn:hover { background: #333; }
+.bar-btn[aria-pressed=true] { background: #fff; color: var(--ink); border-color: #fff; }
+.comp { padding: 14px 16px; display: flex; flex-direction: column; gap: 10px; }
+.comp-h { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
+.comp-h b { font-size: 14px; font-weight: 600; }
+.comp-h span { font-size: 12px; color: var(--ink3); }
+.comp-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.comp-row .sp { flex: 1; }
+.cnt { font-size: 12px; color: var(--ink3); font-variant-numeric: tabular-nums; }
+.hint { font-size: 12px; color: var(--ink3); display: flex; gap: 6px; align-items: flex-start; }
+.err { font-size: 12px; color: var(--red); font-weight: 500; display: flex; gap: 6px; align-items: center; }
+.fl { display: block; font-size: 12px; color: var(--ink3); margin-bottom: 4px; }
+.bignum { display: inline-flex; align-items: center; gap: 10px; font-size: 20px; font-weight: 600; color: var(--blue); font-variant-numeric: tabular-nums; }
+fieldset.out { border: 0; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 13px; }
+fieldset.out legend { font-size: 12px; color: var(--ink3); padding: 0; margin-bottom: 6px; width: 100%; }
+fieldset.out label { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; }
+input[type=radio], input[type=checkbox] { width: 16px; height: 16px; accent-color: var(--blue); cursor: pointer; }
+
+.why { margin: 0 24px 16px 100px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 8px; background: #fff; display: flex; flex-direction: column; gap: 10px; }
+.why-h { font-size: 13px; font-weight: 600; }
+.why-h span { font-weight: 400; color: var(--ink3); }
+.rchips { display: flex; flex-wrap: wrap; gap: 8px; }
+.rchip { height: 32px; padding: 0 12px; border: 1px solid var(--line); border-radius: 19px; background: #fff; color: var(--ink); font-size: 13px; font-weight: 500; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+.rchip:hover { background: var(--line-soft); }
+.rchip[aria-pressed=true] { background: #000; border-color: #000; color: #fff; }
+.rchip svg { display: none; }
+.rchip[aria-pressed=true] svg { display: inline; }
+.why-note { margin: 0; font-size: 13px; color: var(--ink2); display: flex; gap: 8px; align-items: flex-start; }
+.why-note svg { flex-shrink: 0; margin-top: 2px; }
+
+.banner { display: flex; align-items: flex-start; gap: 12px; padding: 16px 24px; border-bottom: 1px solid var(--line); font-size: 13px; }
+.banner.ok { background: var(--green-bg); color: var(--green-ink); }
+.banner .bi { width: 28px; height: 28px; border-radius: 50%; background: #fff; display: grid; place-items: center; flex-shrink: 0; }
+.fewer { padding: 14px 24px; border-top: 1px solid var(--line); background: var(--bg-soft); font-size: 13px; color: var(--ink2); }
+.fewer ul { margin: 8px 0 0; padding-left: 18px; color: var(--ink3); }
+.mod-foot { padding: 12px 24px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; font-size: 13px; }
+
+/* Compact variant (Agent Home) */
+.compact .mod-head { padding: 16px; }
+.compact .rec-row { grid-template-columns: 18px minmax(0, 1fr) auto; padding: 12px 16px; gap: 4px 10px; }
+.compact .rec-row .av { display: none; }
+.compact .rec-main, .compact .rec-acts { grid-column: 2 / 4; }
+.compact .rec.done .rec-main, .compact .rec.dis .rec-main { grid-column: 2; }
+.compact .rec.done .rec-acts, .compact .rec.dis .rec-acts { grid-column: 3; grid-row: 1; }
+.compact .rec-name { font-size: 14px; }
+.compact .rec-why { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.compact .act .lb { display: none; }
+.compact .act { width: 32px; padding: 0; justify-content: center; }
+.compact .act.chev { display: none; }
+.compact .rec-acts { gap: 4px; }
+.compact .panel, .compact .why { margin: 0 16px 12px 16px; }
+.compact .mod-foot { padding: 12px 16px; }
+.compact .banner, .compact .fewer { padding-left: 16px; padding-right: 16px; }
+
+/* Skeleton */
+.sk { background: linear-gradient(90deg, #EEE 0%, #F7F7F7 50%, #EEE 100%); background-size: 200% 100%; animation: shimmer 1.4s infinite linear; border-radius: 4px; }
+@keyframes shimmer { to { background-position: -200% 0; } }
+@media (prefers-reduced-motion: reduce) { .sk { animation: none; } }
+
+/* Toast */
+.toast-wrap { position: fixed; left: 50%; bottom: 76px; transform: translateX(-50%); z-index: 1001; width: max-content; max-width: calc(100vw - 32px); }
+.toast-live { display: flex; align-items: flex-start; gap: 12px; background: var(--ink); color: #fff; border-radius: 8px; padding: 12px 14px 12px 16px; box-shadow: 0 6px 20px rgba(0,0,0,.28); font-size: 13px; max-width: 520px; }
+.toast-live .tsub { color: #C9C9C9; font-size: 12px; margin-top: 2px; }
+.tbtn { border: 0; background: none; color: #8FC0FF; font-size: 13px; font-weight: 600; cursor: pointer; padding: 2px 4px; white-space: nowrap; }
+.tbtn:hover { color: #fff; text-decoration: underline; }
+.tx { border: 0; background: none; color: #C9C9C9; cursor: pointer; font-size: 18px; line-height: 1; padding: 0 2px; }
+.tx:hover { color: #fff; }
+
+/* Notes */
+.notes h3 { margin: 18px 0 8px; font-size: 14px; font-weight: 600; }
+.notes ol, .notes ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; font-size: 13px; color: var(--ink2); max-width: 820px; }
+.notes li b { color: var(--ink); }
+.xr { font-size: 12px; font-weight: 600; white-space: nowrap; margin-left: 4px; }
+.pm-p { margin: 0 0 18px; font-size: 13px; color: var(--ink2); max-width: 820px; }
+.pmq-top { border: 1px solid var(--blue-100); background: var(--blue-soft); border-radius: 8px; padding: 18px 20px; }
+.notes ol.top5 { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; max-width: none; }
+.top5 li { display: grid; grid-template-columns: 32px minmax(0, 1fr); gap: 12px; color: var(--ink2); }
+.top5 .tn { font-family: var(--serif); font-size: 28px; font-weight: 600; color: var(--blue); line-height: 1; }
+.t5m { margin-top: 4px; font-size: 12px; color: var(--ink3); }
+.t5m a { font-weight: 600; margin-right: 4px; }
+.pmq-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin: 24px 0 8px; }
+.pm-key { font-size: 12px; color: var(--ink3); margin: 0 0 12px; line-height: 1.9; }
+details.th { border: 1px solid var(--line); border-radius: 8px; background: #fff; margin-top: 10px; }
+details.th > summary { cursor: pointer; padding: 12px 16px; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; list-style: none; border-radius: 8px; }
+details.th > summary::-webkit-details-marker { display: none; }
+details.th > summary:hover { background: var(--bg-soft); }
+.th-t { font-weight: 600; font-size: 14px; flex: 1 1 220px; }
+.th-c { font-size: 12px; color: var(--ink3); }
+details.th .chv { transition: transform .15s; color: var(--ink3); flex-shrink: 0; }
+details.th[open] > summary .chv { transform: rotate(180deg); }
+.qi { padding: 14px 16px; border-top: 1px solid var(--line-soft); scroll-margin-top: 16px; }
+.qi:target, .qi.hl { background: var(--blue-soft); }
+.qi-h { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: baseline; }
+.qn { font-size: 12px; font-weight: 700; color: var(--ink3); font-variant-numeric: tabular-nums; min-width: 28px; }
+.qi-q { font-weight: 600; font-size: 14px; color: var(--ink); flex: 1 1 240px; min-width: 0; }
+.qi dl { display: grid; grid-template-columns: 124px minmax(0, 1fr); gap: 4px 12px; margin: 8px 0 0 38px; font-size: 13px; }
+.qi dt { color: var(--ink3); font-size: 12px; padding-top: 1px; }
+.qi dd { margin: 0; color: var(--ink2); overflow-wrap: anywhere; }
+.notes ul.pm-ul { padding-left: 18px; gap: 2px; }
+.xref { margin: 8px 0 0 38px; font-size: 12px; color: var(--ink3); border-left: 2px solid var(--line); padding-left: 8px; }
+.xref.diff { color: var(--amber-ink); border-left-color: var(--amber); }
+.xref a { font-weight: 600; }
+.inc { padding: 4px 16px 16px; border-top: 1px solid var(--line-soft); }
+.inc h4 { margin: 14px 0 6px; font-size: 13px; font-weight: 600; }
+code { font-family: ui-monospace, Consolas, monospace; font-size: 12px; background: var(--line-soft); padding: 0 4px; border-radius: 3px; overflow-wrap: anywhere; }
+@media (max-width: 640px) {
+  .qi dl { grid-template-columns: minmax(0, 1fr); margin-left: 0; gap: 0; }
+  .qi dt { margin-top: 8px; }
+  .xref { margin-left: 0; }
+  .pmq-top { padding: 16px; }
+}
+table.t { width: 100%; border-collapse: collapse; font-size: 13px; }
+table.t th { text-align: left; font-size: 11px; font-weight: 500; color: var(--ink3); text-transform: uppercase; letter-spacing: .04em; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+table.t td { padding: 10px; border-bottom: 1px solid var(--line-soft); vertical-align: top; }
+.tscroll { overflow-x: auto; }
+
+/* Screen switcher (review tool, not part of the product) */
+.switcher { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 1000; background: rgba(23,23,23,.94); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 999px; padding: 5px; display: flex; align-items: center; gap: 2px; box-shadow: 0 4px 16px rgba(0,0,0,.25); max-width: calc(100vw - 24px); overflow-x: auto; }
+.switcher .lab { padding: 0 8px 0 10px; color: rgba(255,255,255,.6); letter-spacing: .06em; text-transform: uppercase; font-size: 10px; font-weight: 600; white-space: nowrap; }
+.switcher a { height: 30px; padding: 0 12px; display: inline-flex; align-items: center; font-size: 12px; font-weight: 500; color: rgba(255,255,255,.75); border-radius: 999px; white-space: nowrap; }
+.switcher a:hover { color: #fff; background: rgba(255,255,255,.1); }
+.switcher a[aria-current=page] { background: #fff; color: #000; }
+.foot { padding: 0 32px 96px; font-size: 12px; color: var(--ink3); }
+
+@media (max-width: 900px) {
+  .left-nav { display: none; }
+  .mobile-bar { display: block; }
+  .app { flex-direction: column; }
+  .topbar, .page-head, .body { padding-left: 16px; padding-right: 16px; }
+  .foot { padding-left: 16px; padding-right: 16px; }
+}
+@media (max-width: 640px) {
+  .mod-head { padding: 16px; }
+  .rec-row, .compact .rec-row { grid-template-columns: 18px minmax(0, 1fr); padding: 14px 16px; gap: 6px 10px; }
+  .rec-row .av { display: none; }
+  .recs .rec .rec-main { grid-column: 2; }
+  .recs .rec .rec-acts { grid-column: 2; grid-row: auto; justify-content: flex-start; margin-top: 4px; }
+  .panel, .why, .compact .panel, .compact .why { margin: 0 16px 14px; }
+  .banner, .fewer, .mod-foot { padding-left: 16px; padding-right: 16px; }
+  .prog { min-width: 0; flex: 1 1 100%; }
+  h1.title { font-size: 24px; }
+}
+</style>
+</head>
+<body>
+
+<div class="mobile-bar"><span class="wordmark">COMPASS</span></div>
+<div class="app">
+
+<nav class="left-nav" aria-label="Primary">
+  <div class="nav-head">
+    <button type="button" class="burger" aria-label="Collapse menu"><span></span><span></span><span></span></button>
+    <span class="wordmark">COMPASS</span>
+  </div>
+  <a class="nl" href="#"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/><path d="M18 16l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7z"/></svg>AI Assistant</a>
+  <div class="nav-div"></div>
+  <a class="nl" href="#agent-home" data-nav="home"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7v9h-6v-6H9v6H3z"/></svg>Home</a>
+  <a class="nl" href="#"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M16 16l5 5"/></svg>Search</a>
+  <a class="nl" href="#"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4v16h16"/><path d="M7 15l4-4 3 3 5-6"/></svg>Performance</a>
+  <a class="nl" href="#dashboard" data-nav="contacts"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>Contacts</a>
+  <a class="nc" href="#dashboard" data-nav="dashboard">Dashboard</a>
+  <a class="nc" href="#">All Contacts</a>
+  <a class="nc" href="#">Leads</a>
+  <a class="nc" href="#">Likely to Sell</a>
+  <a class="nc" href="#">Groups</a>
+  <a class="nc" href="#">Archived</a>
+  <a class="nl" href="#"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 6l9 7 9-7"/></svg>Messages</a>
+  <a class="nl" href="#"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M8 12l3 3 5-6"/></svg>Tasks</a>
+  <a class="nl" href="#"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 21V4"/><path d="M6 4h12l-2.5 4.5L18 13H6"/></svg>Action Plans</a>
+  <a class="nl" href="#"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 5h16M4 10h10M4 15h16M4 20h10"/></svg>Reporting</a>
+  <a class="nl" href="#"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M4 10v4h3l6 5V5L7 10z"/><path d="M16 9a4 4 0 010 6"/></svg>Marketing</a>
+  <a class="nl" href="#settings" data-nav="settings"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg>Settings</a>
+</nav>
+
+<main>
+
+<!-- ================= 1 · DASHBOARD ================= -->
+<section class="screen" data-screen="dashboard" data-nav-on="dashboard" aria-label="CRM Dashboard with today's client list">
+  <div class="topbar">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="#">Contacts</a><span aria-hidden="true">/</span><b>Dashboard</b></nav>
+    <span style="font-size:12px;color:var(--ink3)">Wednesday, Oct 21 · 11:48 a.m.</span>
+  </div>
+  <header class="page-head">
+    <div>
+      <h1 class="title" style="margin-top:0">Dashboard</h1>
+      <div class="page-sub">Good morning, Marcus. Start with the clients below, then work your tasks.</div>
+    </div>
+  </header>
+  <div class="body">
+    <div class="wrap">
+      <section class="card flush f2" data-list="dash" aria-label="Today's clients to contact"></section>
+      <div class="f1" style="display:flex;flex-direction:column;gap:16px">
+        <section class="card" aria-labelledby="tasks-h">
+          <div class="card-head" style="margin-bottom:6px"><div><h2 class="ct" id="tasks-h">Tasks due today</h2><div class="cs">3 open · 1 done</div></div><a href="#" style="font-size:13px">All tasks →</a></div>
+          <div class="help-row" style="display:flex;gap:10px;align-items:flex-start"><input type="checkbox" aria-label="Complete: Follow-up call, Hannah and Leo Brooks"><div><div style="font-weight:500">Follow-up call · Hannah &amp; Leo Brooks</div><div style="margin-top:4px"><span class="pill sm t-blue">On today's client list</span></div></div></div>
+          <div class="help-row" style="display:flex;gap:10px;align-items:flex-start"><input type="checkbox" aria-label="Complete: Showing prep, 2 Pine St"><div style="font-weight:500">Showing prep · 2 Pine St</div></div>
+          <div class="help-row" style="display:flex;gap:10px;align-items:flex-start"><input type="checkbox" aria-label="Complete: Send buyer packet, Nora Feld"><div style="font-weight:500">Send buyer packet · Nora Feld</div></div>
+          <div class="help-row" style="display:flex;gap:10px;align-items:flex-start;color:var(--ink3)"><input type="checkbox" checked aria-label="Completed: Send home value report, Clara Mendes"><div><div style="text-decoration:line-through">Send home value report · Clara Mendes</div><div style="font-size:12px">Completed from your client list, 11:20 a.m.</div></div></div>
+        </section>
+        <section class="card" aria-labelledby="brief-h" style="display:flex;flex-direction:column;gap:12px">
+          <h2 class="ct" id="brief-h"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0064E5" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/></svg>Daily Briefing</h2>
+          <div class="ai-say"><div class="k">AI Assistant</div>5 clients on your list are still open. Hannah &amp; Leo Brooks are first: 7 years in their home, and 3 similar homes nearby sold in the last 60 days.</div>
+          <button type="button" class="chip">Who on my list should I call first?</button>
+          <div style="font-size:12px;color:var(--ink3)">The assistant reads from this list instead of ranking clients on its own. Whether it can mark contacted or dismiss is <span class="tbd">[TBD]</span>.</div>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 2 · AGENT HOME ================= -->
+<section class="screen" data-screen="agent-home" data-nav-on="home" aria-label="Agent Home with compact client list" hidden>
+  <div class="topbar">
+    <nav class="crumbs" aria-label="Breadcrumb"><b>Home</b></nav>
+    <span style="font-size:12px;color:var(--ink3)">Wednesday, Oct 21 · 11:48 a.m.</span>
+  </div>
+  <header class="page-head">
+    <div>
+      <h1 class="title" style="margin-top:0">Good morning, Marcus</h1>
+      <div class="page-sub">Your listings, calendar and clients in one place.</div>
+    </div>
+  </header>
+  <div class="body">
+    <div class="notice blue">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0064E5" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>
+      <div style="flex:1 1 320px"><b>Placement option B <span class="tbd">[TBD]</span>:</b> the same list as a compact module on Agent Home. It shows the top 5, icon-only actions and a 2-line reason. Compare with option A, the full module on the Dashboard.</div>
+      <a class="btn-ghost" href="#dashboard">See option A</a>
+    </div>
+    <div class="wrap">
+      <div class="f2" style="display:flex;flex-direction:column;gap:16px">
+        <section class="card ph-card" aria-label="Existing module placeholder"><div class="kpi-label">Existing Agent Home module</div><div style="font-weight:600;margin-top:6px">Your listings</div><div class="ph-bar" style="width:90%"></div><div class="ph-bar" style="width:70%"></div><div class="ph-bar" style="width:80%"></div></section>
+        <section class="card ph-card" aria-label="Existing module placeholder"><div class="kpi-label">Existing Agent Home module</div><div style="font-weight:600;margin-top:6px">Today's calendar</div><div class="ph-bar" style="width:60%"></div><div class="ph-bar" style="width:75%"></div></section>
+        <section class="card ph-card" aria-label="Existing module placeholder"><div class="kpi-label">Existing Agent Home module</div><div style="font-weight:600;margin-top:6px">Market activity</div><div class="ph-bar" style="width:85%"></div><div class="ph-bar" style="width:50%"></div></section>
+      </div>
+      <section class="card flush f1 compact" data-list="home" aria-label="Clients to contact today"></section>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 3 · EXPANDED ================= -->
+<section class="screen" data-screen="expanded" data-nav-on="dashboard" aria-label="Expanded list item" hidden>
+  <div class="topbar">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="#">Contacts</a><span aria-hidden="true">/</span><a href="#dashboard">Dashboard</a><span aria-hidden="true">/</span><b>Expanded item</b></nav>
+  </div>
+  <header class="page-head">
+    <div>
+      <h1 class="title" style="margin-top:0">Client details, inline</h1>
+      <div class="page-sub">Select a name or the arrow to open details without leaving the list. Several items can be open at once.</div>
+    </div>
+  </header>
+  <div class="body">
+    <div class="wrap">
+      <section class="card flush f2" data-list="exp" aria-label="Today's clients to contact"></section>
+      <section class="card f1" aria-labelledby="xp-h">
+        <h2 class="ct" id="xp-h">What's in the expanded view</h2>
+        <ol style="margin:12px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:10px;font-size:13px;color:var(--ink2)">
+          <li><b>Contact details.</b> Phone, email and the home address the signal is about. Phone and email are links, so they work on mobile.</li>
+          <li><b>Recent activity.</b> The last 3 timeline events, newest first.</li>
+          <li><b>AI client summary.</b> Loaded on expand. If none exists we say so instead of showing an empty box.</li>
+          <li><b>Open task.</b> Contacting the client from the list also completes this task.</li>
+          <li><b>Reason source.</b> Says whether an AI wrote the reason or it came from a standard template, and when.</li>
+          <li><b>"This reason is wrong".</b> One click. The client stays on the list. You can add an optional detail after.</li>
+          <li><b>View full profile.</b> The only link that leaves the list.</li>
+        </ol>
+      </section>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 4 · ACTIONS ================= -->
+<section class="screen" data-screen="actions" data-nav-on="dashboard" aria-label="Inline call, text and email" hidden>
+  <div class="topbar">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="#">Contacts</a><span aria-hidden="true">/</span><a href="#dashboard">Dashboard</a><span aria-hidden="true">/</span><b>Inline actions</b></nav>
+    <div class="tools"><span style="font-size:12px;color:var(--ink3)">Preview as</span>
+      <div class="seg" role="group" aria-label="Preview as agent type" id="mode-seg"><button type="button" aria-pressed="true" data-mode="inapp">In-app calling</button><button type="button" aria-pressed="false" data-mode="manual">Calls from own phone</button></div>
+    </div>
+  </div>
+  <header class="page-head">
+    <div>
+      <h1 class="title" style="margin-top:0">Call, text and email from the list</h1>
+      <div class="page-sub">Every action opens inside the row. Ending a call or sending a text or email logs it to the timeline and marks the client as contacted. Switch the preview at the top right to see the path for agents who call from their own phone.</div>
+    </div>
+  </header>
+  <div class="body">
+    <section class="card flush" data-list="act" aria-label="Today's clients to contact"></section>
+    <h2 class="ct" style="margin-top:16px">Flow states</h2>
+    <div class="states">
+      <div class="state"><div class="kpi-label">A · Text composer</div><div class="card flush" data-list="snap-text" aria-label="Text composer example"></div></div>
+      <div class="state"><div class="kpi-label">B · Email composer</div><div class="card flush" data-list="snap-email" aria-label="Email composer example"></div></div>
+      <div class="state"><div class="kpi-label">C · Call ended: contacted automatically</div>
+        <div class="card flush" data-list="snap-done" aria-label="Contacted automatically example"></div>
+        <div class="toast-dark" style="display:flex;gap:12px;align-items:flex-start;font-size:13px"><div style="flex:1"><b style="font-weight:600">Call logged (2:14) · Hannah marked as contacted</b><div style="color:#C9C9C9;font-size:12px;margin-top:2px">Added to the contact timeline. Follow-up call task completed.</div></div><a href="#" style="color:#8FC0FF;font-weight:600;white-space:nowrap">View timeline</a></div>
+      </div>
+      <div class="state"><div class="kpi-label">D · No in-app calling: call from own phone</div><div class="card flush" data-list="snap-manual" aria-label="Call from own phone example"></div></div>
+      <div class="state"><div class="kpi-label">E · Log call with notes</div><div class="card flush" data-list="snap-log" aria-label="Log call example"></div></div>
+      <div class="state"><div class="kpi-label">F · Mark as called: undo and dedupe</div>
+        <div class="card flush" data-list="snap-mark" aria-label="Marked as called example"></div>
+        <div class="toast-dark" style="display:flex;gap:12px;align-items:flex-start;font-size:13px"><div style="flex:1"><b style="font-weight:600">Marked as called · logged to Robert's timeline</b><div style="color:#C9C9C9;font-size:12px;margin-top:2px">If you also log this call on the profile within <span style="color:#FFE08A;font-weight:600">[TBD] minutes</span>, we keep one entry, not two.</div></div><button type="button" class="tbtn">Undo</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 5 · DISMISS ================= -->
+<section class="screen" data-screen="dismiss" data-nav-on="dashboard" aria-label="Dismiss with optional reason" hidden>
+  <div class="topbar">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="#">Contacts</a><span aria-hidden="true">/</span><a href="#dashboard">Dashboard</a><span aria-hidden="true">/</span><b>Dismiss</b></nav>
+  </div>
+  <header class="page-head">
+    <div>
+      <h1 class="title" style="margin-top:0">Dismiss, then optionally say why</h1>
+      <div class="page-sub">Dismiss takes one click and strikes the client through right away. The reason is optional. Each reason sets how long the client stays off your list. <b>Dismissing never reassigns a client.</b></div>
+    </div>
+  </header>
+  <div class="body">
+    <div class="wrap">
+      <section class="card flush f2" data-list="dis" aria-label="Today's clients to contact"></section>
+      <section class="card f1" aria-labelledby="dr-h">
+        <h2 class="ct" id="dr-h">What each reason does</h2>
+        <div class="cs" style="margin-bottom:8px">All windows are proposals until ML Science and the AI Context Intelligence service confirm them.</div>
+        <div class="help-row"><div style="font-weight:600">No reason</div><div style="font-size:13px;color:var(--ink2)">Off today's list. Can come back on a later day. <span class="tbd">[TBD]</span></div><div style="font-size:12px;color:var(--ink3);margin-top:2px">Stays your client</div></div>
+        <div class="help-row"><div style="font-weight:600">Not now</div><div style="font-size:13px;color:var(--ink2)">Hidden for 14 days <span class="tbd">[TBD]</span></div><div style="font-size:12px;color:var(--ink3);margin-top:2px">Stays your client</div></div>
+        <div class="help-row"><div style="font-weight:600">Already working with them</div><div style="font-size:13px;color:var(--ink2)">Hidden for 30 days <span class="tbd">[TBD]</span></div><div style="font-size:12px;color:var(--ink3);margin-top:2px">Stays your client</div></div>
+        <div class="help-row"><div style="font-weight:600">Bad fit</div><div style="font-size:13px;color:var(--ink2)">Hidden for 90 days <span class="tbd">[TBD]</span>. Feeds model feedback <span class="tbd">[TBD]</span></div><div style="font-size:12px;color:var(--ink3);margin-top:2px">Stays your client</div></div>
+        <div class="help-row"><div style="font-weight:600">Not my client</div><div style="font-size:13px;color:var(--ink2)">Hidden from your list until ownership changes <span class="tbd">[TBD]</span></div><div style="font-size:12px;color:var(--amber-ink);margin-top:2px;font-weight:500">May start an ownership review or reassignment <span class="tbd">[TBD]</span></div></div>
+        <div class="notice plain" style="margin-top:12px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0064E5" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="flex-shrink:0;margin-top:1px"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg><span>Today, dismissing in LTS triggers reassignment. List dismissals must be logged <b>without</b> that trigger (dependency on AI Context Intelligence save-feedback).</span></div>
+      </section>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 6 · SETTINGS ================= -->
+<section class="screen" data-screen="settings" data-nav-on="settings" aria-label="List length setting" hidden>
+  <div class="topbar">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="#">Settings</a><span aria-hidden="true">/</span><a href="#">Contacts</a><span aria-hidden="true">/</span><b>Client list</b></nav>
+  </div>
+  <header class="page-head">
+    <div>
+      <h1 class="title" style="margin-top:0">Client list</h1>
+      <div class="page-sub">Choose how many clients you get each day. The same setting is in the list header as "Show".</div>
+    </div>
+  </header>
+  <div class="body">
+    <div class="wrap">
+      <section class="card f2" aria-labelledby="len-h">
+        <h2 class="ct" id="len-h">List length</h2>
+        <div class="cs" style="margin-bottom:18px">Between 5 and 20 clients a day. Default is 10.</div>
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px">
+          <div style="flex:1 1 280px;min-width:0">
+            <label for="len-range" class="fl">Clients per day</label>
+            <input id="len-range" type="range" min="5" max="20" step="1" value="10" style="width:100%;accent-color:var(--blue)" aria-describedby="len-help">
+            <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--ink3)" aria-hidden="true"><span>5</span><span>10 (default)</span><span>15</span><span>20</span></div>
+          </div>
+          <div style="text-align:center;min-width:96px"><div style="font-family:var(--serif);font-size:40px;font-weight:600;line-height:1" id="len-out" aria-live="polite">10</div><div style="font-size:12px;color:var(--ink3)">clients a day</div></div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:16px" role="group" aria-label="Quick picks">
+          <button type="button" class="pillf" data-len="5">5 · About 15 min</button>
+          <button type="button" class="pillf" data-len="10">10 · About 30 min</button>
+          <button type="button" class="pillf" data-len="15">15</button>
+          <button type="button" class="pillf" data-len="20">20</button>
+        </div>
+        <p id="len-help" style="font-size:13px;color:var(--ink2);margin:16px 0 0">More room doesn't mean more names. We only list clients with a fresh signal, so on some days you'll see fewer. A longer list fills from today's pool right away. A shorter list keeps clients you've already worked until you refresh. Time estimates are <span class="tbd">[TBD]</span>.</p>
+        <div style="display:flex;gap:8px;margin-top:20px;flex-wrap:wrap;align-items:center"><button type="button" class="btn" id="len-save">Save</button><button type="button" class="btn-ghost" id="len-reset">Reset to 10</button><span id="len-saved" role="status" style="font-size:13px;color:var(--green-ink);font-weight:500"></span></div>
+      </section>
+      <section class="card f1" aria-labelledby="ex-h">
+        <h2 class="ct" id="ex-h">Always left off your list</h2>
+        <div class="cs" style="margin-bottom:8px">So the list only shows people you can act on today.</div>
+        <ul style="margin:0;padding-left:18px;font-size:13px;color:var(--ink2);display:flex;flex-direction:column;gap:6px">
+          <li>Contacted in the past 7 days, by any channel</li>
+          <li>Dismissed, until the reason's window ends</li>
+          <li>Snoozed, suppressed or archived contacts</li>
+          <li>Deleted contacts</li>
+          <li>Do Not Contact</li>
+          <li>People who aren't in your CRM</li>
+        </ul>
+        <div style="font-size:12px;color:var(--ink3);margin-top:12px">Your list is built every morning before 6 a.m. local time.</div>
+      </section>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 7 · TEAM ================= -->
+<section class="screen" data-screen="team" data-nav-on="dashboard" aria-label="Team agent with shared contacts" hidden>
+  <div class="topbar">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="#">Contacts</a><span aria-hidden="true">/</span><b>Dashboard</b></nav>
+    <span class="pill t-grey">Team agent · Whitfield Group</span>
+  </div>
+  <header class="page-head">
+    <div>
+      <h1 class="title" style="margin-top:0">Dashboard</h1>
+      <div class="page-sub">Team agent view. Shared clients show whether a teammate already reached out today.</div>
+    </div>
+  </header>
+  <div class="body">
+    <div class="wrap">
+      <section class="card flush f2" data-list="team" aria-label="Today's clients to contact"></section>
+      <section class="card f1" aria-labelledby="sh-h">
+        <h2 class="ct" id="sh-h">Shared clients</h2>
+        <div class="help-row"><div style="margin-bottom:6px"><span class="pill sm t-amber">Teammate contacted today</span></div><div style="font-size:13px;color:var(--ink2)">Shows when a teammate logged a call, text or email with this client today. It names who and when, so you can check with them first. The client stays on your list and isn't counted as your contact.</div></div>
+        <div class="help-row"><div style="margin-bottom:6px;font-size:12px;color:var(--ink3)" class="meta-i">Shared with 2 teammates · team's highest score</div><div style="font-size:13px;color:var(--ink2)">The tier shown is the highest on the team, the same rule the contacts table uses. Whether your rank uses that score or your own is <span class="tbd">[TBD]</span>.</div></div>
+        <div class="help-row"><div style="font-size:13px;color:var(--ink2)">Dismissing a shared client only removes it from <b>your</b> list. Your dismiss reasons are never shown to teammates.</div></div>
+      </section>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 8 · STATES ================= -->
+<section class="screen" data-screen="states" data-nav-on="dashboard" aria-label="List states" hidden>
+  <div class="topbar">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="#">Contacts</a><span aria-hidden="true">/</span><a href="#dashboard">Dashboard</a><span aria-hidden="true">/</span><b>States</b></nav>
+  </div>
+  <header class="page-head">
+    <div>
+      <h1 class="title" style="margin-top:0">Refresh, empty &amp; fallback states</h1>
+      <div class="page-sub">Supporting states for the list module.</div>
+    </div>
+  </header>
+  <div class="body">
+    <div class="states">
+      <div class="state">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><div class="kpi-label">A · Refresh fills open slots</div><button type="button" class="btn-sm" id="replay">Replay animation</button></div>
+        <div class="card flush" data-list="st-backfill" aria-label="Refresh backfill example"></div>
+      </div>
+      <div class="state">
+        <div class="kpi-label">B · Fewer candidates than list length</div>
+        <div class="card flush" data-list="st-fewer" aria-label="Short list example"></div>
+      </div>
+      <div class="state">
+        <div class="kpi-label">C · All done for today</div>
+        <div class="card flush" data-list="st-done" aria-label="All done example"></div>
+      </div>
+      <div class="state">
+        <div class="kpi-label">D · New agent or empty database</div>
+        <div class="card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:12px;min-height:360px">
+          <div style="width:56px;height:56px;border-radius:50%;background:var(--blue-soft);color:var(--blue);display:grid;place-items:center"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></div>
+          <h2 style="margin:0;font-family:var(--serif);font-size:22px;font-weight:600">No clients to suggest yet</h2>
+          <p style="margin:0;font-size:13px;color:var(--ink3);max-width:340px">Your list fills in once you have clients in Compass CRM. We look for clients whose home or browsing activity suggests it's a good time to reach out. Suggestions start the morning after you add contacts.</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center"><a class="btn" href="#">Import contacts</a><a class="btn-ghost" href="#">Add a contact</a></div>
+          <div style="font-size:12px;color:var(--ink3)">Minimum database size for a useful list: <span class="tbd">[TBD]</span></div>
+        </div>
+      </div>
+      <div class="state">
+        <div class="kpi-label">E · Loading</div>
+        <div class="card flush" aria-busy="true" aria-label="Loading today's list">
+          <div class="mod-head"><div><div class="sk" style="width:200px;height:16px"></div><div class="sk" style="width:140px;height:11px;margin-top:8px"></div></div><div class="sk" style="width:150px;height:28px;border-radius:14px"></div></div>
+          <div id="sk-rows"></div>
+          <span class="sr">Loading today's list</span>
+        </div>
+      </div>
+      <div class="state">
+        <div class="kpi-label">F · Reason fallback and reason unavailable</div>
+        <div class="card flush" data-list="st-fallback" aria-label="Reason fallback example"></div>
+      </div>
+      <div class="state">
+        <div class="kpi-label">G · List couldn't load</div>
+        <div class="card" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:12px;min-height:260px">
+          <div style="width:48px;height:48px;border-radius:50%;background:var(--red-bg);color:var(--red);display:grid;place-items:center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17v.5"/></svg></div>
+          <h2 class="ct">We couldn't load today's list</h2>
+          <p style="margin:0;font-size:13px;color:var(--ink3);max-width:320px">Check your connection, then try again. Your contacts and tasks aren't affected.</p>
+          <button type="button" class="btn-ghost">Try again</button>
+        </div>
+      </div>
+      <div class="state">
+        <div class="kpi-label">H · Refresh with nothing new</div>
+        <div class="card flush">
+          <div class="mod-head"><div><h2 class="ct">Today's clients to contact</h2><div class="cs">Ranked for you from home and browsing signals</div></div><span class="fresh"><span class="dot" style="background:var(--green)"></span><span>Updated <b>just now</b></span><button type="button" class="icon-btn" aria-label="Refresh list"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 11-2.3-5.7"/><path d="M20 4v4h-4"/></svg></button></span></div>
+          <div style="padding:24px"><div class="toast-dark" style="display:flex;gap:12px;align-items:flex-start;font-size:13px"><div><b style="font-weight:600">No new clients right now</b><div style="color:#C9C9C9;font-size:12px;margin-top:2px">You still have 3 open clients. Today's pool is used up. Tomorrow's list arrives by 6 a.m.</div></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= 9 · NOTES ================= -->
+<section class="screen" data-screen="notes" aria-label="Design notes and open questions" hidden>
+  <div class="topbar">
+    <nav class="crumbs" aria-label="Breadcrumb"><b>Design notes &amp; open questions</b></nav>
+    <span style="font-size:12px;color:var(--ink3)">For PRD review · Oct 21, 2026</span>
+  </div>
+  <header class="page-head">
+    <div>
+      <h1 class="title" style="margin-top:0">Design notes &amp; open questions</h1>
+      <div class="page-sub">Why the mocks look the way they do, what they assume, and what the team still needs to decide. <span class="tbd">[TBD]</span> marks values that aren't settled.</div>
+    </div>
+    <a class="btn" href="#notes/pmq-h">PRD review: top 5 and 22 blockers</a>
+  </header>
+  <div class="body">
+    <section class="card notes" aria-labelledby="dd-h">
+      <h2 class="ct" id="dd-h">Design decisions</h2>
+      <ol>
+        <li><b>One component, two densities.</b> The full module (Dashboard) and the compact module (Agent Home) share data, states and events. A placement test then changes only where the list sits and how dense it is.</li>
+        <li><b>The reason comes first.</b> The plain-language reason is the main line of each item. The tier is a small High/Medium label with a bar icon. We never show raw scores, which agents can't act on.</li>
+        <li><b>Plain-language signal chips.</b> "Likely to sell" and "Browsing more homes" instead of BFY or IWA. Each chip has an icon and text, so meaning never depends on colour. A client with both signals shows both chips.</li>
+        <li><b>Worked items stay in place until refresh.</b> Contacted items turn grey with a "Contacted" label plus how and when. Dismissed items are struck through with a "Dismissed" label. Keeping their rank position stops the list from jumping under the cursor. Refresh clears them and fills open slots.</li>
+        <li><b>Dismiss takes one click, and the reason is optional.</b> The reason chips appear after the strikethrough, show the suppression window as you pick, and say plainly that dismissing doesn't reassign the client. "Not my client" has a <span class="tbd">[TBD]</span> warning until reassignment rules are decided.</li>
+        <li><b>Actions open inside the row.</b> In-app call bar, tap-to-call panel for agents without in-app calling, and text and email composers. Only one action panel is open at a time, so the list stays readable. Ending a call or sending a message marks the client as contacted and logs it automatically.</li>
+        <li><b>"Mark as called" is on every open item,</b> even for agents with in-app calling, because many still dial from their own phone. It shows an undo toast and the dedupe note.</li>
+        <li><b>Reason source is visible but secondary.</b> The expanded view says whether an AI wrote the reason or it came from a template, and when. Fallback or missing reasons are labelled on the row itself.</li>
+        <li><b>Flagging a reason takes one click and doesn't remove the client.</b> An optional "What's wrong?" follow-up collects detail without forcing it.</li>
+        <li><b>Open tasks show on the item.</b> The copy says contacting from the list completes the task too (the PRD's mitigation for task overlap).</li>
+        <li><b>Short and empty lists explain themselves.</b> "That's everyone with a fresh signal today" plus the exclusion rules, instead of padding the list with weak suggestions.</li>
+        <li><b>Accessibility.</b> Real buttons whose names include the visible label. Visible focus ring. aria-expanded on expanders. Escape closes panels. Toasts in a polite live region. Greyed text stays at AA contrast (#6C6C6C on #FAFAFA). The slide-in respects reduced motion.</li>
+      </ol>
+      <h3>Fair Housing-safe reason copy</h3>
+      <ul>
+        <li>Reasons and summaries only use property and behaviour signals: time in home, estimated value or equity change, nearby sales and listings, listings viewed, and saved searches.</li>
+        <li>They never mention or imply demographics, family status, age, life stage, health, religion or national origin. No "growing family", "empty nesters" or "retiring". Reasons avoid gendered pronouns.</li>
+        <li>IWA reasons use one fixed template: "Viewed N for-sale listings in the past 7 days, X times the busiest week in the prior month." An optional saved-search clause can be added.</li>
+      </ul>
+      <h3>Assumptions</h3>
+      <ul>
+        <li>The CRM Dashboard sits under Contacts in the left nav, and Agent Home is the existing Home.</li>
+        <li>The sample agent is Marcus Lee. It's 11:48 a.m. local time, and the pool was built at 5:42 a.m.</li>
+        <li>Suppression windows (14, 30 and 90 days) and the dedupe window are placeholders.</li>
+        <li>After a refresh, open items keep their order and new items join at the bottom. The progress count covers the current list, and worked items that refresh cleared count as "earlier today".</li>
+        <li>Texts go from the agent's Compass number. Emails go from the connected mailbox.</li>
+        <li>Working an item on one surface updates it everywhere (one source of truth).</li>
+      </ul>
+    </section>
+
+    <section class="card notes" aria-labelledby="oq-h">
+      <h2 class="ct" id="oq-h">Questions the mocks raised</h2>
+      <ol>
+        <li id="dq-1"><b>Placement.</b> Dashboard, Agent Home, or both? If both, is the compact version a summary that links to the full list, or a full peer? <a class="xr" href="#notes/q7">PM Q7</a></li>
+        <li id="dq-2"><b>Does email count as contacted?</b> The mocks assume yes (PRD proposal). What about a call logged as "Left voicemail" or "No answer"? The mocks count all three outcomes <span class="tbd">[TBD]</span>. <a class="xr" href="#notes/q20">PM Q20</a></li>
+        <li id="dq-3"><b>AI Assistant overlap.</b> The Daily Briefing reads from the list. Can the assistant set states (mark contacted, dismiss), and are those logged as from_list? <a class="xr" href="#notes/q52">PM Q52</a></li>
+        <li id="dq-4"><b>Task overlap.</b> Does any contact complete any open task, or only a matching channel (a call completes a call task)? What happens to a task like "Send CMA"? <a class="xr" href="#notes/q43">PM Q43</a></li>
+        <li id="dq-5"><b>Double logging.</b> How long is the dedupe window? Does it also cover calls logged from the mobile app or a connected dialer? <a class="xr" href="#notes/q42">PM Q42</a></li>
+        <li id="dq-6"><b>Fair Housing review scope.</b> The AI client summary isn't covered by the P0 rationale validators today. Does it need the same allow-list and review? Who signs off the chip labels and IWA templates? <a class="xr" href="#notes/q31">PM Q31</a></li>
+        <li id="dq-7"><b>Shared contacts.</b> BFY includes LTW, which is specific to each agent, but the PRD says shared contacts show the team's highest score. Which one drives rank, and which drives the tier label? <a class="xr" href="#notes/q14">PM Q14</a></li>
+        <li id="dq-8"><b>Teammate contacted.</b> Should it count as contacted for me, move the client down the list, or only show the badge (as mocked)? <a class="xr" href="#notes/q37">PM Q37</a></li>
+        <li id="dq-9"><b>"Not my client".</b> Does it trigger reassignment, a team lead review, or only suppression? <a class="xr" href="#notes/q28">PM Q28</a></li>
+        <li id="dq-10"><b>Shortening the list mid-day.</b> Should open items be removed right away (as mocked) or only from tomorrow? <a class="xr" href="#notes/q24">PM Q24</a></li>
+        <li id="dq-11"><b>Missing reason.</b> Show the item with generic copy (as mocked) or leave it off the list? <a class="xr" href="#notes/q30">PM Q30</a></li>
+        <li id="dq-12"><b>Mobile.</b> Is this the same component in the Compass iOS and Android apps, where tap-to-call is the default? <a class="xr" href="#notes/q5">PM Q5</a></li>
+        <li id="dq-13"><b>The LTS page.</b> Retire it or merge it at launch? The mocks keep "Likely to Sell" in the nav for now. <a class="xr" href="#notes/q8">PM Q8</a></li>
+      </ol>
+    </section>
+
+    <section class="card notes" aria-labelledby="pmq-h">
+      <h2 class="ct" id="pmq-h">PRD review questions (Senior PM)</h2>
+      <div class="cs" style="margin-bottom:14px">From the Senior PM's review of the Oct 20, 2026 draft. Review only: the PRD itself hasn't been edited. "Design Q" links point to the questions above. Amber notes mark places where the mocks differ from the PM's proposed default.</div>
+      <div id="pm-questions">
+
+        <h3 style="margin-top:0">Overall assessment</h3>
+        <p class="pm-p">The problem framing is strong. The history section (low adoption of the standalone LTS page, cap removal, reassignment on dismiss) gives the most useful context in the doc. The event table and attribution windows are more developed than in most P1 PRDs. The main gaps are in the core mechanics that design and engineering need to build against. There's no rule for how BFY and IWA items are merged and ranked. Dismiss isn't clearly separated from the existing reassignment path, which is the biggest risk to agent trust. Shared-contact behaviour contradicts the "ranked for the individual agent" claim. The success metrics have no primary metric, no baselines and no targets, so the GA exit criterion ("primary metric meets target (TBD)") can't be tested yet. Finally, the evidence (FUB teams asking for "smart lists" and "call lists") only partly supports this feature. The PRD should say plainly which parts are validated and which are a bet.</p>
+
+        <div class="pmq-top" aria-labelledby="top5-h">
+          <h3 id="top5-h" style="margin:0 0 12px;font-size:16px">Top 5 questions to resolve first</h3>
+          <ol class="top5">
+            <li><span class="tn">1</span><div><b>Dismiss must never reassign an agent's own client.</b> What does a list dismissal call in the backend? What suppression window applies to each reason? Can the 60-day inactivity rule move a client who was shown but ignored? This is the biggest trust risk, and it sets the BE design for the legacy save-feedback service.<div class="t5m">Owners: BE, ML Science, PM · <a href="#notes/q26">Q26</a> <a href="#notes/q27">Q27</a> <a href="#notes/q25">Q25</a> · Design <a href="#notes/dq-9">Q9</a></div></div></li>
+            <li><span class="tn">2</span><div><b>How the pool is built and ranked.</b> Which BFY tiers and IWA levels qualify? How are the two signals merged into one order? Whose score is used for shared contacts? What's the real pool size per agent? Design and engineering can't commit to list length, refresh or the empty states without this.<div class="t5m">Owners: ML Science, Data Science, PM · <a href="#notes/q11">Q11</a> <a href="#notes/q12">Q12</a> <a href="#notes/q13">Q13</a> <a href="#notes/q14">Q14</a> · Design <a href="#notes/dq-7">Q7</a></div></div></li>
+            <li><span class="tn">3</span><div><b>What the agent reads.</b> If P0 slips, does a Legal-approved BFY template set exist? Is the inline AI summary under the same Fair Housing gate? Today the fallback plan relies on templates nobody has specified.<div class="t5m">Owners: ML Science, Legal, AI Assistant team · <a href="#notes/q30">Q30</a> <a href="#notes/q31">Q31</a> · Design <a href="#notes/dq-6">Q6</a></div></div></li>
+            <li><span class="tn">4</span><div><b>Placement and one source of truth.</b> Dashboard or Agent Home? What happens to the LTS page? Does the AI Assistant's Daily Briefing read from this list? Mark and stakeholders need to sign off, and the mocks depend on the answer.<div class="t5m">Owners: PM, Design, AI Assistant team, Mark · <a href="#notes/q7">Q7</a> <a href="#notes/q8">Q8</a> <a href="#notes/q52">Q52</a> · Design <a href="#notes/dq-1">Q1</a> <a href="#notes/dq-3">Q3</a> <a href="#notes/dq-13">Q13</a></div></div></li>
+            <li><span class="tn">5</span><div><b>Primary metric and experiment unit.</b> Name one primary metric with a baseline. Decide whether to randomize by team, how control agents get a counterfactual pool, and whether <code>recommendation_id</code> is created per day. Without these, the GA gate can't be tested and the tracking schema could be built wrong.<div class="t5m">Owners: Data Science, BE, PM · <a href="#notes/q45">Q45</a> <a href="#notes/q46">Q46</a> <a href="#notes/q47">Q47</a> <a href="#notes/q36">Q36</a></div></div></li>
+          </ol>
+        </div>
+
+        <div class="pmq-bar">
+          <h3 style="margin:0">All questions by theme</h3>
+          <div class="seg" role="group" aria-label="Filter questions by priority" id="pmq-filter">
+            <button type="button" aria-pressed="true" data-f="all">All 58</button>
+            <button type="button" aria-pressed="false" data-f="B">Blockers 22</button>
+            <button type="button" aria-pressed="false" data-f="N">Before build 26</button>
+            <button type="button" aria-pressed="false" data-f="W">Can wait 10</button>
+          </div>
+          <span class="cs" id="pmq-count" role="status" style="margin:0"></span>
+        </div>
+        <p class="pm-key"><span class="pill sm t-red">Blocker for P1</span> must be answered before P1 design and engineering commit. <span class="pill sm t-amber">Needed before build</span> needed before the related work starts. <span class="pill sm t-grey">Can wait</span> can be settled during beta or later.</p>
+
+        <details class="th"><summary><span class="th-t">A. Problem, evidence and scope</span><span class="th-c">6 questions · 1 blocker</span><svg class="chv" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <article class="qi" id="q1" data-pri="N"><div class="qi-h"><span class="qn">Q1</span><span class="qi-q">Does a ranked recommendation list actually meet the FUB "smart lists" need, or is that need for user-defined saved filters?</span><span class="pill sm t-amber">Needed before build</span></div><dl><dt>Why it matters</dt><dd>The headline stat (52%) is used to justify this feature. If FUB teams mean "lists I define myself", this PRD doesn't remove that migration blocker, and the FUB hypothesis needs a different measure.</dd><dt>Owner</dt><dd>PM (with research)</dd><dt>Proposed default</dt><dd>Label the FUB-migration hypothesis ASSUMED. Treat this feature as covering "call lists" (10%) and only part of "smart lists". Add to Non-goals: "User-defined smart lists are not in P1."</dd></dl></article>
+          <article class="qi" id="q2" data-pri="N"><div class="qi-h"><span class="qn">Q2</span><span class="qi-q">What are the source, date and sample size behind the 52% / 10% / 450 teams / 15% of GCI figures?</span><span class="pill sm t-amber">Needed before build</span></div><dl><dt>Why it matters</dt><dd>Reviewers and stakeholders will ask, and the PRD template requires evidence links.</dd><dt>Owner</dt><dd>PM</dd><dt>Proposed default</dt><dd>Add a footnote linking the FUB migration survey or analysis and its n.</dd></dl></article>
+          <article class="qi" id="q3" data-pri="N"><div class="qi-h"><span class="qn">Q3</span><span class="qi-q">What would make us stop or roll back? Is there a kill criterion?</span><span class="pill sm t-amber">Needed before build</span></div><dl><dt>Why it matters</dt><dd>Without one, a weak beta drifts into GA. Example: dismiss rate above X%, or no contact-rate lift over holdout after 60 days.</dd><dt>Owner</dt><dd>PM, Data Science</dd><dt>Proposed default</dt><dd>Stop or rework if, after 60 days of beta, contact rate shows no statistically significant lift over holdout, or if any Fair Housing incident is confirmed.</dd></dl></article>
+          <article class="qi" id="q4" data-pri="N"><div class="qi-h"><span class="qn">Q4</span><span class="qi-q">What's the smallest version that proves value? Could P1 ship BFY-only (with IWA as a fast follow) if the IWA pipeline fixes slip?</span><span class="pill sm t-amber">Needed before build</span></div><dl><dt>Why it matters</dt><dd>IWA has open TODOs (Unity Catalog output, score join, tests) and no outcome data. Making it a hard dependency adds schedule risk.</dd><dt>Owner</dt><dd>PM, ML Science, BE</dd><dt>Proposed default</dt><dd>IWA is a Should, not a Must. P1 can launch sell-side only. Record this in the decision log.</dd></dl></article>
+          <article class="qi" id="q5" data-pri="B"><div class="qi-h"><span class="qn">Q5</span><span class="qi-q">Are mobile (iOS/Android) in P1 scope?</span><span class="pill sm t-red">Blocker for P1</span></div><dl><dt>Why it matters</dt><dd>The event table logs <code>platform (web, iOS, Android)</code>, but no requirement mentions mobile. Inline calling and texting are most natural on a phone.</dd><dt>Owner</dt><dd>PM, Design, FE</dd><dt>Proposed default</dt><dd>Web first in P1. Mobile is Later, but events are designed so mobile can reuse them.</dd></dl><div class="xref">Same as Design <a href="#notes/dq-12">Q12</a>. The mocks are web and work at phone width.</div></article>
+          <article class="qi" id="q6" data-pri="W"><div class="qi-h"><span class="qn">Q6</span><span class="qi-q">Is a daily notification or digest (push or email: "Your 10 clients for today") in scope?</span><span class="pill sm t-grey">Can wait</span></div><dl><dt>Why it matters</dt><dd>The low adoption of the LTS page was a discovery problem. A dashboard tile with no prompt may repeat it.</dd><dt>Owner</dt><dd>PM, Design</dd><dt>Proposed default</dt><dd>Out of scope for P1. List it as a non-goal, and test it in beta if the share of agents who view the list is low.</dd></dl></article>
+        </details>
+
+        <details class="th"><summary><span class="th-t">B. Placement and surface consolidation</span><span class="th-c">4 questions · 2 blockers</span><svg class="chv" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <article class="qi" id="q7" data-pri="B"><div class="qi-h"><span class="qn">Q7</span><span class="qi-q">CRM Dashboard, Agent Home, or both? Who decides, and by what date?</span><span class="pill sm t-red">Blocker for P1</span></div><dl><dt>Why it matters</dt><dd>Placement drives component size, the expand pattern, the event <code>surface</code> value and FE ownership. The mocks depend on it.</dd><dt>Owner</dt><dd>PM, Design (Lihan Huang), Mark for sign-off</dd><dt>Proposed default</dt><dd>CRM Dashboard for P1, because outreach channels and contact data already live in CRM. Agent Home shows a compact entry point that links to the list. Needs Mark's sign-off.</dd></dl><div class="xref">Same as Design <a href="#notes/dq-1">Q1</a>. Screens 1 and 2 show both options. The compact Agent Home module already links to the full list.</div></article>
+          <article class="qi" id="q8" data-pri="B"><div class="qi-h"><span class="qn">Q8</span><span class="qi-q">What happens to the LTS left-nav page at launch: retire it, redirect it to the list, or keep it?</span><span class="pill sm t-red">Blocker for P1</span></div><dl><dt>Why it matters</dt><dd>The doc says "a decision is needed" but doesn't list it under Open questions. A fourth surface works against the consolidation goal.</dd><dt>Owner</dt><dd>PM, Mark and stakeholders</dd><dt>Proposed default</dt><dd>Keep the page during the A/B test, because control agents need today's surfaces. At GA, redirect it to the list.</dd></dl><div class="xref">Same as Design <a href="#notes/dq-13">Q13</a>. The mocks keep "Likely to Sell" in the nav, which matches the test-period default.</div></article>
+          <article class="qi" id="q9" data-pri="W"><div class="qi-h"><span class="qn">Q9</span><span class="qi-q">Do the contacts-table High/Medium/Low label and the profile Insights label stay as they are? Should they show the same reason text?</span><span class="pill sm t-grey">Can wait</span></div><dl><dt>Why it matters</dt><dd>An agent could see a reason on the list and no reason on the profile for the same client, which looks inconsistent.</dd><dt>Owner</dt><dd>PM, Design</dd><dt>Proposed default</dt><dd>Labels stay. The profile shows the same reason when the contact is on today's list. Showing it more widely is P2.</dd></dl></article>
+          <article class="qi" id="q10" data-pri="N"><div class="qi-h"><span class="qn">Q10</span><span class="qi-q">Does the list show the score or High/Medium/Low label at all, or only the reason?</span><span class="pill sm t-amber">Needed before build</span></div><dl><dt>Why it matters</dt><dd>Design needs to know what goes in each row. A percentile next to a reason invites "why only Medium?"</dd><dt>Owner</dt><dd>PM, Design</dd><dt>Proposed default</dt><dd>Show the reason and a signal tag (Seller / Buyer). Hide the numeric score. Log <code>tier</code> and <code>score_percentile</code> in events only.</dd></dl><div class="xref diff">Mock differs: rows show signal chips plus a small High/Medium label (no numbers). The label is easy to remove.</div></article>
+        </details>
+
+        <details class="th"><summary><span class="th-t">C. Ranking and pool</span><span class="th-c">8 questions · 4 blockers</span><svg class="chv" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <article class="qi" id="q11" data-pri="B"><div class="qi-h"><span class="qn">Q11</span><span class="qi-q">How are BFY and IWA items combined into one ranked list? Options include interleaving, a fixed quota, a combined score, or "both signals" ranked first.</span><span class="pill sm t-red">Blocker for P1</span></div><dl><dt>Why it matters</dt><dd>BFY is a geo percentile and IWA is a rule-based MEDIUM/HIGH flag, so they share no scale. Engineering can't build ranking, and Design can't show order, without a rule.</dd><dt>Owner</dt><dd>PM, ML Science</dd><dt>Proposed default</dt><dd>Contacts flagged by both signals rank first. Then interleave BFY High and IWA HIGH, then BFY Medium and IWA MEDIUM, ordered by score within each band. Cap IWA at 30% of the list until there's outcome data. Make the rule configurable in the backend, not hard-coded.</dd></dl></article>
+          <article class="qi" id="q12" data-pri="B"><div class="qi-h"><span class="qn">Q12</span><span class="qi-q">What qualifies a contact for the pool: which BFY tiers ("tier 1-3") and which IWA levels? How do "tiers 1-3" relate to High/Medium/Low?</span><span class="pill sm t-red">Blocker for P1</span></div><dl><dt>Why it matters</dt><dd>P0 generates rationales only for tier 1-3 BFY. Contacts outside those tiers either need template reasons or must be excluded.</dd><dt>Owner</dt><dd>ML Science, PM</dd><dt>Proposed default</dt><dd>The pool is BFY tiers 1-3 plus IWA MEDIUM and HIGH only. Define tiers in the PRD glossary.</dd></dl></article>
+          <article class="qi" id="q13" data-pri="B"><div class="qi-h"><span class="qn">Q13</span><span class="qi-q">What's the expected pool size per agent per day (median, p10, p90), split by BFY and IWA?</span><span class="pill sm t-red">Blocker for P1</span></div><dl><dt>Why it matters</dt><dd>If most agents have fewer than 10 candidates, the default length, "refresh for more" and the 5-20 setting all need rethinking. Discovery lists this, but it should come before design commits.</dd><dt>Owner</dt><dd>Data Science, ML Science</dd><dt>Proposed default</dt><dd>Run this analysis before mocks are finalized. Set the default length near the median pool size, capped at 10.</dd></dl><div class="xref">Affects the "Fewer candidates" and "All done" states on <a href="#states">screen 8</a>.</div></article>
+          <article class="qi" id="q14" data-pri="B"><div class="qi-h"><span class="qn">Q14</span><span class="qi-q">For shared contacts, whose BFY is used? Req 11.2 says the "team-wide highest score" is shown, but BFY includes LTW, which is specific to each agent.</span><span class="pill sm t-red">Blocker for P1</span></div><dl><dt>Why it matters</dt><dd>Showing the team-highest score contradicts the "ranked for the individual agent" differentiator. It could also put the same client on several teammates' lists on the same day.</dd><dt>Owner</dt><dd>PM, ML Science, BE</dd><dt>Proposed default</dt><dd>Rank with the viewing agent's own BFY. Don't show the team-highest score on the list. Only the agent with the highest LTW for that contact gets it on their list that day. Teammates see a badge on the profile only.</dd></dl><div class="xref diff">Same as Design <a href="#notes/dq-7">Q7</a>. Mock differs: <a href="#team">screen 7</a> shows "team's highest score" per req 11.2.</div></article>
+          <article class="qi" id="q15" data-pri="N"><div class="qi-h"><span class="qn">Q15</span><span class="qi-q">Are the pool and its order frozen for the day? Does a page reload give the same order?</span><span class="pill sm t-amber">Needed before build</span></div><dl><dt>Why it matters</dt><dd>If the order changes between reloads, agents lose trust and the <code>rank</code> property in events becomes meaningless.</dd><dt>Owner</dt><dd>BE</dd><dt>Proposed default</dt><dd>Frozen once the pool is computed. Only state changes and refresh backfill change what's shown.</dd></dl></article>
+          <article class="qi" id="q16" data-pri="N"><div class="qi-h"><span class="qn">Q16</span><span class="qi-q">How long does an IWA spike stay eligible: one day, 7 days, or the 30 days it shows in the contact view?</span><span class="pill sm t-amber">Needed before build</span></div><dl><dt>Why it matters</dt><dd>A 30-day window could keep a stale buyer on the list for weeks, which hurts the "who to contact today" promise.</dd><dt>Owner</dt><dd>ML Science, PM</dd><dt>Proposed default</dt><dd>Eligible for 7 days after the flag. Stays suppressed once contacted or dismissed.</dd></dl></article>
+          <article class="qi" id="q17" data-pri="N"><div class="qi-h"><span class="qn">Q17</span><span class="qi-q">How do the agent's manual label edits interact with the pool, including the legacy "Likely to Sell" tag?</span><span class="pill sm t-amber">Needed before build</span></div><dl><dt>Why it matters</dt><dd>Setting LOW forces the score to 0 and reassigns. It isn't clear whether a manual HIGH or a "Likely to Sell" tag adds a contact to the list.</dd><dt>Owner</dt><dd>PM, BE</dd><dt>Proposed default</dt><dd>A manual LOW excludes the contact. A manual HIGH or the tag doesn't add the contact in P1, but it's logged as a feature for ML Science.</dd></dl></article>
+          <article class="qi" id="q18" data-pri="N"><div class="qi-h"><span class="qn">Q18</span><span class="qi-q">What does "before 6 a.m. local time" use as local time: the agent's profile time zone or their market's? What happens if the job fails?</span><span class="pill sm t-amber">Needed before build</span></div><dl><dt>Why it matters</dt><dd>Agents in several time zones and job failures both need defined behaviour.</dd><dt>Owner</dt><dd>BE</dd><dt>Proposed default</dt><dd>Use the agent profile time zone, with the market as fallback. If the job fails, show yesterday's unworked pool with a "last updated" note, never an empty list.</dd></dl><div class="xref diff">Mock gap: there's no "yesterday's list" fallback state yet. State G only covers a load error.</div></article>
+        </details>
+
+        <details class="th"><summary><span class="th-t">D. Exclusions and states (contacted, dismissed, refresh)</span><span class="th-c">7 questions · 3 blockers</span><svg class="chv" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <article class="qi" id="q19" data-pri="B"><div class="qi-h"><span class="qn">Q19</span><span class="qi-q">What counts as "recently contacted (past 7 days)" for exclusion? Does it include automated campaign emails, inbound replies, or a teammate's outreach?</span><span class="pill sm t-red">Blocker for P1</span></div><dl><dt>Why it matters</dt><dd>Automations could quietly exclude most of the pool. A teammate's outreach matters for shared contacts.</dd><dt>Owner</dt><dd>PM, BE, Data Science</dd><dt>Proposed default</dt><dd>Agent-initiated one-to-one call, text or email, plus any teammate one-to-one outreach on shared contacts. Exclude drip and automation sends.</dd></dl></article>
+          <article class="qi" id="q20" data-pri="B"><div class="qi-h"><span class="qn">Q20</span><span class="qi-q">Does an email sent from the list count as contacted? (Open question 2.)</span><span class="pill sm t-red">Blocker for P1</span></div><dl><dt>Why it matters</dt><dd>The event table already lists <code>email</code> as a contacted trigger, so the doc decides this in one place and leaves it open in another.</dd><dt>Owner</dt><dd>PM</dd><dt>Proposed default</dt><dd>Yes, when the email is sent through CRM email. Opening a <code>mailto:</code> link alone doesn't count. The agent can use "Mark as contacted" instead.</dd></dl><div class="xref">Same as Design <a href="#notes/dq-2">Q2</a>. The mocks already count a CRM-sent email. Voicemail and no-answer outcomes are still open.</div></article>
+          <article class="qi" id="q21" data-pri="N"><div class="qi-h"><span class="qn">Q21</span><span class="qi-q">After the 7-day exclusion ends, can a contacted client come back on the list?</span><span class="pill sm t-amber">Needed before build</span></div><dl><dt>Why it matters</dt><dd>"Neither comes back on refresh" covers the same day only. Cross-day behaviour isn't defined.</dd><dt>Owner</dt><dd>PM</dd><dt>Proposed default</dt><dd>Yes, after 7 days, but only if the client still qualifies and there's a new or stronger signal.</dd></dl></article>
+          <article class="qi" id="q22" data-pri="N"><div class="qi-h"><span class="qn">Q22</span><span class="qi-q">Is there an undo for "dismiss" and "mark as called"? How long is it available?</span><span class="pill sm t-amber">Needed before build</span></div><dl><dt>Why it matters</dt><dd>The event <code>rec_undo</code> exists, but no requirement describes undo. Design needs to know whether it's a toast, a menu item, or both.</dd><dt>Owner</dt><dd>PM, Design</dd><dt>Proposed default</dt><dd>An undo toast for about 5-10 seconds. Undo stays available from the greyed or struck-through row until the next refresh.</dd></dl><div class="xref">The mocks already do this (9-second toast plus an in-row Undo until refresh).</div></article>
+          <article class="qi" id="q23" data-pri="N"><div class="qi-h"><span class="qn">Q23</span><span class="qi-q">What does refresh do with greyed and struck-through rows: remove them, or keep them visible below new items?</span><span class="pill sm t-amber">Needed before build</span></div><dl><dt>Why it matters</dt><dd>Req 6.3 says greyed items stay "for the session" and req 9 says refresh backfills. It isn't clear when a row leaves the list.</dd><dt>Owner</dt><dd>Design, PM</dd><dt>Proposed default</dt><dd>Refresh removes worked rows and fills slots from the pool. A collapsed "Done today (n)" section keeps the day's progress visible.</dd></dl><div class="xref diff">Mock partly differs: refresh removes worked rows, but the header shows only an "N earlier today" count, not a "Done today" section.</div></article>
+          <article class="qi" id="q24" data-pri="W"><div class="qi-h"><span class="qn">Q24</span><span class="qi-q">If the agent changes the list length mid-day, does it apply immediately?</span><span class="pill sm t-grey">Can wait</span></div><dl><dt>Why it matters</dt><dd>This affects backfill logic and the event properties.</dd><dt>Owner</dt><dd>BE, Design</dd><dt>Proposed default</dt><dd>It applies immediately. A larger length pulls more items from the pool. A smaller length hides the lowest-ranked open items.</dd></dl><div class="xref">Same as Design <a href="#notes/dq-10">Q10</a>. The mocks already behave this way.</div></article>
+          <article class="qi" id="q25" data-pri="B"><div class="qi-h"><span class="qn">Q25</span><span class="qi-q">How does the existing 60-day "no activity" reassignment interact with the list? Can a client who is shown but ignored be reassigned?</span><span class="pill sm t-red">Blocker for P1</span></div><dl><dt>Why it matters</dt><dd>The list could speed up or hide reassignments of an agent's own clients.</dd><dt>Owner</dt><dd>BE, ML Science, PM</dd><dt>Proposed default</dt><dd>The list never triggers reassignment. Confirm whether the 60-day rule applies to the agent's own clients at all. If it does, flag it for Mark as a separate decision.</dd></dl></article>
+        </details>
+
+        <details class="th"><summary><span class="th-t">E. Dismiss reasons and reassignment</span><span class="th-c">4 questions · 2 blockers</span><svg class="chv" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <article class="qi" id="q26" data-pri="B"><div class="qi-h"><span class="qn">Q26</span><span class="qi-q">Exactly what does a list dismissal call in the backend? Does it go through the existing AI Context Intelligence save-feedback path, which reassigns today?</span><span class="pill sm t-red">Blocker for P1</span></div><dl><dt>Why it matters</dt><dd>The doc says "we must treat dismiss carefully to avoid an agent's own client transferring". This is the highest trust risk in the feature.</dd><dt>Owner</dt><dd>BE (Santiago Terenziani), ML Science</dd><dt>Proposed default</dt><dd>Add a new non-reassigning dismissal endpoint. List dismissals never reassign in P1. Any reassignment needs a separate, explicit action outside the list.</dd></dl></article>
+          <article class="qi" id="q27" data-pri="B"><div class="qi-h"><span class="qn">Q27</span><span class="qi-q">What's the final list of dismiss reasons, and what suppression window applies to each?</span><span class="pill sm t-red">Blocker for P1</span></div><dl><dt>Why it matters</dt><dd>Req 8.2 lists Not now / Bad fit / Not my client. The event table adds <code>working_with</code>. No windows are defined.</dd><dt>Owner</dt><dd>PM, ML Science</dd><dt>Proposed default</dt><dd><ul class="pm-ul"><li>Not now: 30 days.</li><li>Already working with them: 90 days, logged as a positive signal.</li><li>Bad fit: 180 days.</li><li>Not my client: suppress and open a data-quality flag. Don't reassign.</li><li>No reason: 30 days.</li></ul></dd></dl><div class="xref diff">Mock differs: <a href="#dismiss">screen 5</a> uses placeholder windows of 14 / 30 / 90 days, and "no reason" means off today's list only.</div></article>
+          <article class="qi" id="q28" data-pri="N"><div class="qi-h"><span class="qn">Q28</span><span class="qi-q">What does "Not my client" mean on a list that contains only the agent's own clients?</span><span class="pill sm t-amber">Needed before build</span></div><dl><dt>Why it matters</dt><dd>It points to a data or ownership error. "Without reassigning unless explicitly specified" doesn't say who specifies it.</dd><dt>Owner</dt><dd>PM, BE</dd><dt>Proposed default</dt><dd>Treat it as a data-quality report. Remove the contact from the list and log it. Never move the contact automatically.</dd></dl><div class="xref diff">Same as Design <a href="#notes/dq-9">Q9</a>. Mock differs: it warns that reassignment may happen [TBD]. With this default, the copy becomes "We'll check this contact's ownership. Nothing moves automatically."</div></article>
+          <article class="qi" id="q29" data-pri="N"><div class="qi-h"><span class="qn">Q29</span><span class="qi-q">Which dismiss reasons feed model training, and does Legal need to review them? (Open question 5.)</span><span class="pill sm t-amber">Needed before build</span></div><dl><dt>Why it matters</dt><dd>Free-text or "bad fit" reasons could encode protected-class bias.</dd><dt>Owner</dt><dd>ML Science, Legal</dd><dt>Proposed default</dt><dd>Fixed reasons only, with no free text in P1. All reasons are logged. ML Science decides training use after Legal review.</dd></dl><div class="xref">The mocks already use fixed chips with no free text.</div></article>
+        </details>
+
+        <details class="th"><summary><span class="th-t">F. Reasons, rationales and Fair Housing</span><span class="th-c">6 questions · 2 blockers</span><svg class="chv" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <article class="qi" id="q30" data-pri="B"><div class="qi-h"><span class="qn">Q30</span><span class="qi-q">If P0 slips, does a Legal-approved BFY template set exist? The Risks section says P1 "can ship with template reasons only", but templates are only specified for IWA.</span><span class="pill sm t-red">Blocker for P1</span></div><dl><dt>Why it matters</dt><dd>The fallback plan depends on templates nobody has scoped.</dd><dt>Owner</dt><dd>ML Science, Legal, PM</dd><dt>Proposed default</dt><dd>Define 5-8 BFY templates built from allow-listed signals (for example tenure, equity change, nearby sales), and get Legal sign-off separately from the LLM gate.</dd></dl><div class="xref">Related to Design <a href="#notes/dq-11">Q11</a>. State F on <a href="#states">screen 8</a> shows a BFY template fallback.</div></article>
+          <article class="qi" id="q31" data-pri="B"><div class="qi-h"><span class="qn">Q31</span><span class="qi-q">Does the "AI summary" in the expanded row fall under the same Fair Housing review and launch gate as the reasons? Which system produces it?</span><span class="pill sm t-red">Blocker for P1</span></div><dl><dt>Why it matters</dt><dd>It's LLM text shown next to the reason, and the P0 gate doesn't cover it.</dd><dt>Owner</dt><dd>PM, AI Assistant team, Legal</dd><dt>Proposed default</dt><dd>Reuse the existing CRM contact summary, if one exists and has passed review. Otherwise drop it from P1.</dd></dl><div class="xref">Same as Design <a href="#notes/dq-6">Q6</a>. If it's dropped, the expanded view still works without the summary block.</div></article>
+          <article class="qi" id="q32" data-pri="N"><div class="qi-h"><span class="qn">Q32</span><span class="qi-q">Can a BFY reason mention anything derived from LTW (the agent's likelihood to win)? LTW is internal only.</span><span class="pill sm t-amber">Needed before build</span></div><dl><dt>Why it matters</dt><dd>Per-model reasons are P2, but one combined reason could leak LTW logic ("you're a good match for this seller").</dd><dt>Owner</dt><dd>ML Science, PM</dd><dt>Proposed default</dt><dd>P1 reasons describe only property and owner signals from LTS, plus relationship facts the agent can already see. LTW is never referenced.</dd></dl></article>
+          <article class="qi" id="q33" data-pri="N"><div class="qi-h"><span class="qn">Q33</span><span class="qi-q">Is the IWA reason text ("viewed 12 homes in 7 days") OK from a consumer-privacy angle when shown in a ranked list?</span><span class="pill sm t-amber">Needed before build</span></div><dl><dt>Why it matters</dt><dd>IWA already appears in the contact view, but ranking people by their browsing on a dashboard is a new use.</dd><dt>Owner</dt><dd>Legal</dd><dt>Proposed default</dt><dd>Use counts and trends only. Never name specific listings in the reason.</dd></dl><div class="xref diff">Mock note: IWA reasons use counts only, but some mention the area of a saved search ("in Maplewood"). Legal should confirm whether that's OK.</div></article>
+          <article class="qi" id="q34" data-pri="N"><div class="qi-h"><span class="qn">Q34</span><span class="qi-q">What happens after an agent flags a reason as wrong (req 2.2)? Is the reason hidden or replaced, and who reviews the flags?</span><span class="pill sm t-amber">Needed before build</span></div><dl><dt>Why it matters</dt><dd>A flag that changes nothing teaches agents to ignore the button.</dd><dt>Owner</dt><dd>PM, ML Science</dd><dt>Proposed default</dt><dd>Swap the flagged reason for the template fallback for that agent. Queue the flag for a weekly ML Science review. Show a "Thanks, we'll review this" confirmation.</dd></dl><div class="xref diff">Mock differs: the flag confirms and keeps the original reason. It doesn't swap in the template.</div></article>
+          <article class="qi" id="q35" data-pri="W"><div class="qi-h"><span class="qn">Q35</span><span class="qi-q">How fresh must a reason be? Can a daily reason go stale (for example "recently listed nearby" when the listing has already sold)?</span><span class="pill sm t-grey">Can wait</span></div><dl><dt>Why it matters</dt><dd>The Risks section says stale reasons hurt trust in the whole feature.</dd><dt>Owner</dt><dd>ML Science</dd><dt>Proposed default</dt><dd>Reasons regenerate daily with the pool. Show "as of [date]" in the expanded row.</dd></dl><div class="xref">The mocks already show "Generated today, 5:42 a.m." in the expanded row.</div></article>
+        </details>
+
+        <details class="th"><summary><span class="th-t">G. Team and shared contacts</span><span class="th-c">4 questions · 1 blocker</span><svg class="chv" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <article class="qi" id="q36" data-pri="B"><div class="qi-h"><span class="qn">Q36</span><span class="qi-q">Should the experiment and the list treat a team as one unit? If one teammate is in the test and another is in control, shared contacts contaminate both groups.</span><span class="pill sm t-red">Blocker for P1</span></div><dl><dt>Why it matters</dt><dd>Agent-level randomization breaks for teams, and teams are the FUB target segment.</dd><dt>Owner</dt><dd>Data Science</dd><dt>Proposed default</dt><dd>Randomize by team (solo agents as teams of one). Stratify by market and database size.</dd></dl></article>
+          <article class="qi" id="q37" data-pri="N"><div class="qi-h"><span class="qn">Q37</span><span class="qi-q">Should the "teammate contacted today" badge (req 11.1) look back today only, or 7 days to match the self-exclusion rule?</span><span class="pill sm t-amber">Needed before build</span></div><dl><dt>Why it matters</dt><dd>The two windows are inconsistent, so a teammate's call on Tuesday doesn't stop a duplicate call on Wednesday.</dd><dt>Owner</dt><dd>PM</dd><dt>Proposed default</dt><dd>Use 7 days. A teammate's outreach on a shared contact excludes it from everyone's list. The badge appears only when the contact is already on the list.</dd></dl><div class="xref diff">Same as Design <a href="#notes/dq-8">Q8</a>. Mock differs: the badge looks back today only, and the client stays on the list.</div></article>
+          <article class="qi" id="q38" data-pri="W"><div class="qi-h"><span class="qn">Q38</span><span class="qi-q">Can team leads see their team's list activity in P1, even without a dedicated view?</span><span class="pill sm t-grey">Can wait</span></div><dl><dt>Why it matters</dt><dd>The persona table says no, but it's also listed as a monetization option. Agents should know in advance whether their activity is visible.</dd><dt>Owner</dt><dd>PM, Legal (privacy)</dd><dt>Proposed default</dt><dd>No visibility in P1. Tell agents in a tooltip that activity is used to improve recommendations.</dd></dl></article>
+          <article class="qi" id="q39" data-pri="W"><div class="qi-h"><span class="qn">Q39</span><span class="qi-q">How do we handle agents on more than one team, or agents moving between teams?</span><span class="pill sm t-grey">Can wait</span></div><dl><dt>Why it matters</dt><dd>It's an edge case for the shared-contact and suppression rules.</dd><dt>Owner</dt><dd>BE</dd><dt>Proposed default</dt><dd>Use current team membership at the time the pool is computed.</dd></dl></article>
+        </details>
+
+        <details class="th"><summary><span class="th-t">H. Inline actions and logging</span><span class="th-c">5 questions · 2 blockers</span><svg class="chv" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <article class="qi" id="q40" data-pri="B"><div class="qi-h"><span class="qn">Q40</span><span class="qi-q">Does inline texting and calling check consent first (texting opt-out, do-not-call)? Is "do-not-contact" the same flag as texting opt-out?</span><span class="pill sm t-red">Blocker for P1</span></div><dl><dt>Why it matters</dt><dd>TCPA and texting carrier rules apply. Req 1.3 excludes "do-not-contact" but doesn't say which flags that covers.</dd><dt>Owner</dt><dd>BE, Legal</dd><dt>Proposed default</dt><dd>Exclude contacts with any do-not-contact flag. For texting, hide or disable the text action when the contact has opted out, and still show call and email.</dd></dl><div class="xref diff">Mock gap: there's no "opted out of texts" state for the Text button yet.</div></article>
+          <article class="qi" id="q41" data-pri="B"><div class="qi-h"><span class="qn">Q41</span><span class="qi-q">What exactly does "without leaving the list" mean for each channel: an in-page dialer, a texting drawer, an email composer modal, or <code>tel:</code> / <code>mailto:</code> handoffs?</span><span class="pill sm t-red">Blocker for P1</span></div><dl><dt>Why it matters</dt><dd>This sets FE scope and decides whether contacted state can be detected automatically.</dd><dt>Owner</dt><dd>FE (Kfir Ankori), Design</dd><dt>Proposed default</dt><dd>Reuse the existing CRM calling, texting and email components in a side panel. Agents without in-app calling get <code>tel:</code> plus a "Mark as called" prompt.</dd></dl><div class="xref diff">Mock differs: <a href="#actions">screen 4</a> opens composers inside the row, not a side panel. The <code>tel:</code> plus "Mark as called" path matches. Row or side panel is open for FE feasibility.</div></article>
+          <article class="qi" id="q42" data-pri="N"><div class="qi-h"><span class="qn">Q42</span><span class="qi-q">What's the "short window" for deduping a "Mark as called" entry against a manual log on the profile (req 7.2)?</span><span class="pill sm t-amber">Needed before build</span></div><dl><dt>Why it matters</dt><dd>Without a number, BE can't build the dedupe and double logging stays unsolved.</dd><dt>Owner</dt><dd>BE, PM</dd><dt>Proposed default</dt><dd>Same contact, same agent, same channel within 30 minutes counts as one event.</dd></dl><div class="xref">Same as Design <a href="#notes/dq-5">Q5</a>. The mock's "[TBD] minutes" would become 30.</div></article>
+          <article class="qi" id="q43" data-pri="N"><div class="qi-h"><span class="qn">Q43</span><span class="qi-q">The doc says open tasks show on the list item, and completing outreach in either place clears both. Is that in P1? No numbered requirement covers it.</span><span class="pill sm t-amber">Needed before build</span></div><dl><dt>Why it matters</dt><dd>It appears only under "product inefficiencies", so it may be built or skipped by accident.</dd><dt>Owner</dt><dd>PM, BE</dd><dt>Proposed default</dt><dd>Should. Show an "open task" chip in P1. Clearing both from one action is Later, unless it's cheap to build.</dd></dl><div class="xref diff">Same as Design <a href="#notes/dq-4">Q4</a>. Mock differs: the copy says contacting completes the task. Drop that line if clearing both is Later.</div></article>
+          <article class="qi" id="q44" data-pri="N"><div class="qi-h"><span class="qn">Q44</span><span class="qi-q">What does "recent activity" in the expanded row include, and how many items?</span><span class="pill sm t-amber">Needed before build</span></div><dl><dt>Why it matters</dt><dd>Design needs to know the content and length to lay out the expanded row.</dd><dt>Owner</dt><dd>Design, PM</dd><dt>Proposed default</dt><dd>The last 3 one-to-one touches plus the most recent IWA or browsing summary.</dd></dl><div class="xref">The mocks show 3 recent events, which is close to this default.</div></article>
+        </details>
+
+        <details class="th"><summary><span class="th-t">I. Tracking, metrics and experiment</span><span class="th-c">7 questions · 4 blockers</span><svg class="chv" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <article class="qi" id="q45" data-pri="B"><div class="qi-h"><span class="qn">Q45</span><span class="qi-q">Which metric is the single primary metric? Success Metrics lists seven with no primary, while the experiment table names "contact rate on BFY/IWA contacts".</span><span class="pill sm t-red">Blocker for P1</span></div><dl><dt>Why it matters</dt><dd>The GA exit criterion depends on it, and scope cuts must protect it.</dd><dt>Owner</dt><dd>PM, Data Science</dd><dt>Proposed default</dt><dd>Primary: the share of recommended contacts contacted within 7 days through any channel, compared with holdout. Guardrails: dismiss rate, reason-flag rate, total outreach volume, Fair Housing incidents (target zero) and list load time.</dd></dl></article>
+          <article class="qi" id="q46" data-pri="B"><div class="qi-h"><span class="qn">Q46</span><span class="qi-q">How is contact rate measured in the control group, which has no impressions?</span><span class="pill sm t-red">Blocker for P1</span></div><dl><dt>Why it matters</dt><dd>Without a counterfactual pool, list and control can't be compared fairly.</dd><dt>Owner</dt><dd>Data Science, BE</dd><dt>Proposed default</dt><dd>Compute and log the pool for control agents too (ghost impressions with the same ranking). Compare contact rates on the same top-N items.</dd></dl></article>
+          <article class="qi" id="q47" data-pri="B"><div class="qi-h"><span class="qn">Q47</span><span class="qi-q">Is <code>recommendation_id</code> one per contact per day, or one per contact while it stays eligible?</span><span class="pill sm t-red">Blocker for P1</span></div><dl><dt>Why it matters</dt><dd>This changes funnel denominators and first-touch attribution. Funnel metric 5 divides by impressions, which may count the same item many times.</dd><dt>Owner</dt><dd>Data Science, BE</dd><dt>Proposed default</dt><dd>One ID per contact per pool day. Funnel rates use unique recommendations shown, not raw impressions.</dd></dl></article>
+          <article class="qi" id="q48" data-pri="N"><div class="qi-h"><span class="qn">Q48</span><span class="qi-q">Do "marked contacted" (success metric) and "any contact through any channel" (attribution table) define the same metric?</span><span class="pill sm t-amber">Needed before build</span></div><dl><dt>Why it matters</dt><dd>They'll give different numbers.</dd><dt>Owner</dt><dd>Data Science</dd><dt>Proposed default</dt><dd>Use "any channel" for the primary metric. Report "from list" separately as a diagnostic.</dd></dl></article>
+          <article class="qi" id="q49" data-pri="B"><div class="qi-h"><span class="qn">Q49</span><span class="qi-q">What are the current baselines? For example, the current LTS action rate and the contact rate on High BFY contacts today.</span><span class="pill sm t-red">Blocker for P1</span></div><dl><dt>Why it matters</dt><dd>Every target is TBD, and a target can't be set without a baseline.</dd><dt>Owner</dt><dd>Data Science</dd><dt>Proposed default</dt><dd>Pull a 90-day baseline before beta. Set the target as a relative lift (for example +20% contact rate) once power analysis is done.</dd></dl></article>
+          <article class="qi" id="q50" data-pri="N"><div class="qi-h"><span class="qn">Q50</span><span class="qi-q">Does a "reason vs. no reason" arm make sense when reasons are the main differentiator and the P0 gate is built around them?</span><span class="pill sm t-amber">Needed before build</span></div><dl><dt>Why it matters</dt><dd>It splits an already small sample, overlaps with the P0 60-day CTR test, and the no-reason arm repeats today's known pain point.</dd><dt>Owner</dt><dd>PM, Data Science, ML Science</dd><dt>Proposed default</dt><dd>Drop it from P1 if the P0 CTR test already measures the effect of reasons. Otherwise compare LLM reasons with template reasons instead.</dd></dl></article>
+          <article class="qi" id="q51" data-pri="N"><div class="qi-h"><span class="qn">Q51</span><span class="qi-q">Is the 5% holdout for 12 months acceptable to the business? Is 12 months enough for an 18-month transaction window?</span><span class="pill sm t-amber">Needed before build</span></div><dl><dt>Why it matters</dt><dd>The holdout holds back a feature from agents, which needs stakeholder sign-off. Also, 12 months doesn't cover the 18-month close window.</dd><dt>Owner</dt><dd>Data Science, Mark</dd><dt>Proposed default</dt><dd>Keep the 5% holdout for 12 months. Report closings as a partial read and extend if needed. Needs Mark's sign-off.</dd></dl></article>
+        </details>
+
+        <details class="th"><summary><span class="th-t">J. Dependencies, sequencing and AI Assistant</span><span class="th-c">4 questions · 1 blocker</span><svg class="chv" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <article class="qi" id="q52" data-pri="B"><div class="qi-h"><span class="qn">Q52</span><span class="qi-q">How will the AI Assistant use the list: read-only, or able to set states? Who arbitrates if their Daily Briefing ranks differently? (Open question 3.)</span><span class="pill sm t-red">Blocker for P1</span></div><dl><dt>Why it matters</dt><dd>Two different "top contacts" lists in the same product would confuse agents. This is a stated risk.</dd><dt>Owner</dt><dd>PM, AI Assistant team, Mark</dd><dt>Proposed default</dt><dd>The list is the source of truth. The assistant reads from it through the same API and can set contacted or dismissed states using the same rules, logged with <code>surface=assistant</code>. Record the decision with the AI Assistant PM.</dd></dl><div class="xref">Same as Design <a href="#notes/dq-3">Q3</a>. The Dashboard's Daily Briefing card already reads from the list.</div></article>
+          <article class="qi" id="q53" data-pri="N"><div class="qi-h"><span class="qn">Q53</span><span class="qi-q">When is the LLM vendor chosen, and what's the date for the P0 launch gate?</span><span class="pill sm t-amber">Needed before build</span></div><dl><dt>Why it matters</dt><dd>The vendor is "not chosen" and blocks P0, which blocks LLM reasons in P1.</dd><dt>Owner</dt><dd>ML Science, Engineering</dd><dt>Proposed default</dt><dd>Plan P1 on templates first, and switch to LLM reasons when the gate passes.</dd></dl></article>
+          <article class="qi" id="q54" data-pri="W"><div class="qi-h"><span class="qn">Q54</span><span class="qi-q">Who owns and delivers the transaction and Make Me Sell outcome joins? The status is TBD.</span><span class="pill sm t-grey">Can wait</span></div><dl><dt>Why it matters</dt><dd>Without them, outcome metrics and the monetization case can't be produced.</dd><dt>Owner</dt><dd>Data Engineering</dd><dt>Proposed default</dt><dd>Name an owner at kickoff. Ship contact-rate tracking first. Needed by beta plus 90 days.</dd></dl></article>
+          <article class="qi" id="q55" data-pri="N"><div class="qi-h"><span class="qn">Q55</span><span class="qi-q">Who is the ML Science reviewer of this PRD, and are Legal and Data Science reviewers named?</span><span class="pill sm t-amber">Needed before build</span></div><dl><dt>Why it matters</dt><dd>The three groups with launch gates aren't on the reviewers list.</dd><dt>Owner</dt><dd>PM</dd><dt>Proposed default</dt><dd>Add one named reviewer each from ML Science, Data Science, Legal and the AI Assistant team.</dd></dl></article>
+        </details>
+
+        <details class="th"><summary><span class="th-t">K. Monetization</span><span class="th-c">3 questions · 0 blockers</span><svg class="chv" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <article class="qi" id="q56" data-pri="W"><div class="qi-h"><span class="qn">Q56</span><span class="qi-q">Is "document monetization options" a P1 deliverable with an owner and due date, or background only?</span><span class="pill sm t-grey">Can wait</span></div><dl><dt>Why it matters</dt><dd>It's listed In Scope, but it produces no product work.</dd><dt>Owner</dt><dd>PM</dd><dt>Proposed default</dt><dd>Move it out of the P1 In Scope list to a "follow-on analysis" line, due after 90 days of beta data.</dd></dl></article>
+          <article class="qi" id="q57" data-pri="W"><div class="qi-h"><span class="qn">Q57</span><span class="qi-q">Does routing unmatched LTS properties as paid leads raise consumer-data or brokerage-policy issues that should be raised now?</span><span class="pill sm t-grey">Can wait</span></div><dl><dt>Why it matters</dt><dd>That option uses homeowner predictions outside any agent relationship.</dd><dt>Owner</dt><dd>Legal, Mark</dd><dt>Proposed default</dt><dd>Keep it as an option only. Do no work until Legal gives a view.</dd></dl></article>
+          <article class="qi" id="q58" data-pri="W"><div class="qi-h"><span class="qn">Q58</span><span class="qi-q">Should sponsored or partner offers be listed at all, given the RESPA risk and the fact that P1 keeps the agent in control?</span><span class="pill sm t-grey">Can wait</span></div><dl><dt>Why it matters</dt><dd>Readers may take inclusion in the PRD as a signal of intent.</dd><dt>Owner</dt><dd>PM, Mark</dd><dt>Proposed default</dt><dd>Keep the option but mark it "not pursued without Legal and RESPA review".</dd></dl></article>
+        </details>
+        <p class="cs" id="pmq-empty" hidden>No questions match this filter.</p>
+
+        <h3>Inconsistencies and gaps in the doc</h3>
+        <details class="th" id="incons"><summary><span class="th-t">16 groups of doc fixes</span><span class="th-c">Editorial; none block design</span><svg class="chv" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary>
+          <div class="inc">
+            <h4>Header and reviewers</h4><ul><li>The Stakeholders field is empty.</li><li>Perumal Sundaram is listed twice (EM and Tech Lead of BE). Confirm this is intentional or name a separate BE tech lead.</li><li>Lihan Huang and Sean McCloud share one row with two roles and two statuses. Split them into separate rows.</li><li>There are no reviewers from ML Science, Data Science, Legal or the AI Assistant team, although all four own launch gates or dependencies.</li></ul>
+            <h4>Section numbering</h4><ul><li>"10. Dependencies" and "8. Monetization options" are the only numbered headings, and they're out of order. Remove the numbers or number every section.</li><li>Heading levels are mixed: "Key Differentiators" is H3 under the H1 one-pager, while the one-pager questions are H4.</li></ul>
+            <h4>Typos and grammar</h4><ul><li>Inefficiencies section: "in teh contacts table" should be "the", and "on in the contact profile" should be "in".</li><li>Key Differentiators: "add potential for monetization" should be "adds potential".</li><li>Key Differentiators: "The ranking factors in Likely to Win favors clients…" has a subject-verb mismatch. Suggested: "Ranking factors in Likely to Win, so it favors clients this agent is likely to win. Competitors do not do this."</li><li>Key Differentiators: "Sell and buy signals on one list" is missing a period, and "Agents have the control, they can choose" is a comma splice.</li><li>Req 1.2: "Pool precomputes" should be "The pool is precomputed".</li></ul>
+            <h4>Duplicated requirements</h4><ul><li>Req 3 duplicates 4 and 5 (3.1 = 4.1, 3.2 = 5.1). Merge them into two stories, "see details and summary inline" (with the full-profile link) and "call, text or email inline" (with auto-logging), and delete 3.</li></ul>
+            <h4>Terms used inconsistently</h4><ul><li>"Client" and "contact" are used interchangeably. Define "client = a contact in the agent's CRM", then use "client" in user-facing copy and "contact" in system and data text. (The mocks follow this rule.)</li><li>"Recommendation", "suggestion", "item" and "candidate" all mean the same thing. Pick one term per meaning.</li><li>"Tier 1-3" is never defined or mapped to High/Medium/Low.</li><li>"Mark as called" (req 7) and the <code>quick_select</code> trigger are never described anywhere else.</li></ul>
+            <h4>Settled in one place, open in another</h4><ul><li>Open question 2 (email counts as contacted) is already decided in the event table.</li><li>Open question 4 (default length) is already "default 10" in req 1.1.</li><li>The decision to retire or merge the LTS page is "needed" but missing from Open questions.</li></ul>
+            <h4>Requirements missing for behaviour described elsewhere</h4><ul><li>Undo has an event (<code>rec_undo</code>) but no requirement.</li><li>The open-task overlap has no requirement.</li><li>Mobile platforms appear in events but not in scope.</li><li>Ghost impressions for the control group aren't specified (see <a href="#notes/q46">Q46</a>).</li></ul>
+            <h4>Dismiss reasons don't match</h4><ul><li>Req 8.2 lists Not now / Bad fit / Not my client, and the event table adds <code>working_with</code>. The UI copy and the enum need to match. (The mocks include all four.)</li></ul>
+            <h4>Shared contacts</h4><ul><li>Req 11.2 (show the team-highest score) contradicts the "ranked for the individual agent" differentiator.</li></ul>
+            <h4>Exclusion windows</h4><ul><li>Self-exclusion is 7 days (req 1.3), but the teammate badge covers "today" only (req 11.1).</li></ul>
+            <h4>Data retention</h4><ul><li>24 months is said to cover "the 12-month attribution window", but the longest window is 18 months. Correct the reason, or extend retention to 18 months plus audit time.</li></ul>
+            <h4>Success Metrics section</h4><ul><li>No primary metric is designated.</li><li>Every target is TBD, and the "TBD%" dismiss alert has no baseline.</li><li>"No drop in overall CRM outreach volume" has no definition or window.</li><li>The FUB-migration hypothesis has no metric.</li><li>GA exit "Primary metric meets target (TBD)" can't be tested as written.</li></ul>
+            <h4>Missing PRD sections</h4><ul><li>No explicit Goals / Non-goals section.</li><li>No Must / Should / Later ranking, so all 12 requirements read as Musts.</li><li>No assumptions marked VALIDATED or ASSUMED.</li><li>No decision log.</li></ul>
+            <h4>Milestones</h4><ul><li>No dates, and no dependency on the P0 gate date.</li><li>"PRT: Beta and A/B test" uses an undefined acronym.</li></ul>
+            <h4>Competitor table</h4><ul><li>The takeaways lead to "P1 makes no buyer-parity promise". That decision should also appear in Non-goals.</li></ul>
+            <h4>Risks section</h4><ul><li>Most risks have no mitigation or owner (for example small-database agents and the conflict with the AI Assistant's list).</li></ul>
+          </div>
+        </details>
+      </div>
+    </section>
+  </div>
+</section>
+
+<footer class="foot">Sample data only. Every name, address, phone number, email, score and activity on these screens is illustrative and fictional. This is a mockup for review, not product UI.</footer>
+
+</main>
+</div>
+
+<div class="toast-wrap" role="status" aria-live="polite" id="toast"></div>
+
+<nav class="switcher" aria-label="Mockup screens">
+  <span class="lab">Screen</span>
+  <a href="#dashboard">1 · Dashboard</a>
+  <a href="#agent-home">2 · Agent Home</a>
+  <a href="#expanded">3 · Expanded</a>
+  <a href="#actions">4 · Actions</a>
+  <a href="#dismiss">5 · Dismiss</a>
+  <a href="#settings">6 · Settings</a>
+  <a href="#team">7 · Team</a>
+  <a href="#states">8 · States</a>
+  <a href="#notes">9 · Notes</a>
+</nav>
+
+<script>
+(function () {
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+  /* ---------- Icons ---------- */
+  const P = {
+    phone: '<path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a1 1 0 01-1 1A16 16 0 014 5a1 1 0 011-1z"/>',
+    text: '<path d="M4 5h16v11H9l-5 4z"/>',
+    mail: '<rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 6l9 7 9-7"/>',
+    check: '<path d="M5 12l5 5 9-10"/>',
+    x: '<path d="M6 6l12 12M18 6L6 18"/>',
+    chev: '<path d="M6 9l6 6 6-6"/>',
+    house: '<path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/>',
+    eye: '<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
+    task: '<rect x="4" y="4" width="16" height="16" rx="1"/><path d="M8 12l3 3 5-6"/>',
+    flag: '<path d="M5 21V4"/><path d="M5 4h11l-2 4 2 4H5"/>',
+    refresh: '<path d="M20 12a8 8 0 11-2.3-5.7"/><path d="M20 4v4h-4"/>',
+    spark: '<path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/>',
+    team: '<circle cx="9" cy="8" r="3"/><path d="M3 20c1-3.5 3.3-5 6-5s5 1.5 6 5"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14.5c2.3.2 4 1.8 5 4.5"/>',
+    pin: '<path d="M12 21s-7-6.2-7-11a7 7 0 0114 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/>',
+    info: '<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/>',
+    warn: '<path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17v.5"/>',
+    tmpl: '<rect x="4" y="4" width="16" height="16" rx="1"/><path d="M8 9h8M8 13h8M8 17h5"/>',
+    ext: '<path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 14v6H4V6h6"/>'
+  };
+  const ic = (n, s = 16, w = 1.8) => `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${P[n]}</svg>`;
+
+  /* ---------- Sample data (fictional) ---------- */
+  const SIG = { sell: ['Likely to sell', 'house'], buy: ['Browsing more homes', 'eye'] };
+  const SRC = {
+    ai: ['spark', 'Reason written by AI from home value, time in home and nearby sales. Checked against Fair Housing rules. Generated today, 5:42 a.m.'],
+    template: ['tmpl', 'Standard reason from Compass browsing activity (past 7 days compared with the prior 30). Generated today, 5:42 a.m.'],
+    fallback: ['tmpl', 'Standard reason. A detailed reason wasn\'t available today, so we used a template.'],
+    none: ['info', 'No reason available today. The client is listed because of a recent signal. [TBD] Show or exclude?']
+  };
+  const WHY = {
+    not_now: ['Not now', 'Hidden from your list for 14 days [TBD]. Still your client.'],
+    working: ['Already working with them', 'Hidden from your list for 30 days [TBD]. Still your client.'],
+    bad_fit: ['Bad fit', 'Hidden from your list for 90 days [TBD]. Helps improve future suggestions. Still your client.'],
+    not_mine: ['Not my client', 'Hidden from your list. [TBD] This may start an ownership review or reassignment. Nothing is reassigned until that rule is decided.']
+  };
+  const tbd = (s) => esc(s).replace(/\[TBD\]/g, '<span class="tbd">[TBD]</span>');
+
+  let n = 10;
+  function mk(o) {
+    n++;
+    const toks = o.name.toLowerCase().replace(/&/g, '').split(/\s+/).filter(Boolean);
+    const isBuy = (o.sig || ['sell'])[0] === 'buy';
+    return Object.assign({
+      state: 'open', sig: ['sell'], tier: 'Medium', src: 'ai', task: null, shared: null,
+      ini: o.name.split(/\s+/).filter((p) => /^[A-Z]/.test(p)).map((p) => p[0]).filter((c, i, a) => i === 0 || i === a.length - 1).join(''),
+      phone: `(973) 555-01${n}`, email: `${toks[0]}.${toks[toks.length - 1]}@example.com`,
+      addr: `${10 + n * 3} Elm St, Maplewood, NJ`,
+      activity: isBuy ? [['Oct 20', 'Viewed 4 for-sale listings'], ['Oct 17', 'Saved a search in Maplewood'], ['Sep 2', 'Email from you: new listings']] : [['Oct 8', 'Opened your market update'], ['Jul 14', 'Call logged · 6 min'], ['Mar 3', 'Home value report sent']],
+      summary: isBuy ? 'Registered on Compass this year. Browsing for-sale listings in Maplewood and South Orange. No call logged in the past 90 days.' : 'Long-time homeowner in your database. Last spoke in July about recent sales nearby. Opens most of your market emails.'
+    }, o);
+  }
+
+  const BASE = [
+    mk({ id: 'r1', name: 'Hannah & Leo Brooks', ini: 'HB', sig: ['sell'], tier: 'High', src: 'ai',
+      reason: 'Owned their home 7 years. Estimated value is up 31% since purchase, and 3 similar homes within half a mile sold in the last 60 days.',
+      task: { t: 'Follow-up call', due: 'due today' }, phone: '(973) 555-0142', email: 'hbrooks@example.com', addr: '41 Orchard Ln, Montclair, NJ',
+      activity: [['Oct 12', 'Opened your Montclair market update'], ['Aug 3', 'Call logged · 9 min · refinancing options'], ['May 20', 'Home value report sent']],
+      summary: 'Bought 41 Orchard Ln with you in 2019. Last spoke in August about refinancing options. Opened your October market update and clicked the Montclair sold-homes report.' }),
+    mk({ id: 'r2', name: 'Jen & Chris Alder', ini: 'JA', sig: ['sell'], tier: 'High', state: 'done', doneHow: 'Called 9:14 a.m.',
+      reason: 'Estimated equity is up about $180K since 2019, and recent sales on their street closed above asking.', addr: '12 Carteret St, Montclair, NJ',
+      summary: 'Bought in 2019. You called this morning at 9:14 a.m. and noted they\'d like a CMA by Friday.' }),
+    mk({ id: 'r3', name: 'Daniel Ortega', ini: 'DO', sig: ['buy'], tier: 'High', src: 'template',
+      reason: 'Viewed 14 for-sale listings in the past 7 days, 2.1x the busiest week in the prior month. Saved a new search in Maplewood.',
+      phone: '(646) 555-0117', email: 'd.ortega@example.com', addr: 'No home on record',
+      activity: [['Oct 20', 'Viewed 6 for-sale listings'], ['Oct 18', 'Saved search: Maplewood, 3+ beds'], ['Jan 9', 'Registered on compass.com']],
+      summary: 'Registered on compass.com in January. Has 2 saved searches, in Maplewood and South Orange. No call logged in the past 90 days.' }),
+    mk({ id: 'r4', name: 'Priya Krishnan', ini: 'PK', sig: ['sell', 'buy'], tier: 'High', src: 'ai',
+      reason: 'Owned 9 years, with an estimated 24% value gain. Also viewed 8 for-sale listings in Maplewood this week.', addr: '18 Ridge Rd, South Orange, NJ',
+      summary: 'Has owned 18 Ridge Rd since 2017. Asked you for a home value estimate in March. Viewing listings in Maplewood this week.' }),
+    mk({ id: 'r5', name: 'Nora Feld', ini: 'NF', sig: ['buy'], tier: 'Medium', src: 'template', state: 'done', doneHow: 'Texted 10:02 a.m.',
+      reason: 'Saved 2 new searches and viewed 7 for-sale listings this week, 1.6x the busiest week in the prior month.', addr: 'No home on record' }),
+    mk({ id: 'r6', name: 'Robert Fields', ini: 'RF', sig: ['sell'], tier: 'Medium', src: 'ai',
+      reason: 'Owned 11 years. Two homes on the same street were listed this month.', task: { t: 'Send CMA', due: 'due Oct 23' },
+      phone: '(917) 555-0183', email: 'rfields@example.com', addr: '7 Valley Rd, Montclair, NJ',
+      summary: 'Sold a home with you in 2020 and bought 7 Valley Rd the same year. Last call was in May, about recent sales on the street.' }),
+    mk({ id: 'r7', name: 'Ines Carvalho', ini: 'IC', sig: ['sell'], tier: 'Medium', state: 'done', doneHow: 'Marked as called 8:40 a.m.',
+      reason: 'Owned 12 years. 4 homes nearby sold in the last 90 days.' }),
+    mk({ id: 'r8', name: 'Theo Grant', ini: 'TG', sig: ['sell'], tier: 'Medium', state: 'dis', disWhy: 'not_now',
+      reason: 'Owned 6 years. Estimated value is up 18% since purchase.' }),
+    mk({ id: 'r9', name: 'Clara Mendes', ini: 'CM', sig: ['sell'], tier: 'Medium', state: 'done', doneHow: 'Emailed 11:20 a.m.',
+      reason: 'Owned 8 years. Estimated value is up 22%, and a similar home on the block sold last month.' }),
+    mk({ id: 'r10', name: 'Ben Okafor', ini: 'BO', sig: ['buy'], tier: 'Medium', src: 'template',
+      reason: 'Viewed 9 for-sale listings in the past 7 days, 1.5x the busiest week in the prior month.', addr: 'No home on record', summary: null })
+  ];
+  const POOL = [
+    mk({ id: 'p1', name: 'Aaron Webb', ini: 'AW', sig: ['sell'], tier: 'Medium', reason: 'Owned 8 years. Estimated value is up 20%, and a similar home two streets away sold in 9 days.' }),
+    mk({ id: 'p2', name: 'Megan Ross', ini: 'MR', sig: ['buy'], tier: 'Medium', src: 'template', reason: 'Viewed 7 for-sale listings in the past 7 days, 1.5x the busiest week in the prior month. Saved a new search.' }),
+    mk({ id: 'p3', name: 'Luis Alvarez', ini: 'LA', sig: ['sell'], tier: 'Medium', reason: 'Owned 14 years. 3 homes within half a mile sold above list price in the last 90 days.' })
+  ];
+  const TEAM = [
+    BASE[0],
+    mk({ id: 't2', name: 'Grace & Ana Liu', ini: 'GL', sig: ['sell'], tier: 'High',
+      reason: 'Owned 10 years. Estimated value is up 38%, and 2 homes on the same block went under contract this month.',
+      shared: { n: 2, by: 'Dana Whitfield', how: 'texted', at: '10:05 a.m.' } }),
+    BASE[2],
+    mk({ id: 't4', name: 'Kevin Moore', ini: 'KM', sig: ['buy'], tier: 'Medium', src: 'template',
+      reason: 'Viewed 11 for-sale listings in the past 7 days, 1.6x the busiest week in the prior month.', shared: { n: 1 } }),
+    BASE[5], BASE[1], BASE[9]
+  ];
+
+  const byId = (arr, ids) => ids.map((id) => arr.find((x) => x.id === id));
+  const clone = (x) => Object.assign({}, x);
+  const firstOf = (name) => name.split(' ')[0];
+  const fmt = (s) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
+
+  /* ---------- Toast ---------- */
+  const T = $('#toast'); let tT = null, tUndo = null;
+  function hideToast() { T.innerHTML = ''; tUndo = null; }
+  function toast(msg, o = {}) {
+    tUndo = o.undo || null;
+    T.innerHTML = `<div class="toast-live"><div style="flex:1"><b style="font-weight:600">${msg}</b>${o.sub ? `<div class="tsub">${o.sub}</div>` : ''}</div>${o.undo ? '<button type="button" class="tbtn" data-t="undo">Undo</button>' : ''}<button type="button" class="tx" aria-label="Close notification">&times;</button></div>`;
+    clearTimeout(tT); tT = setTimeout(hideToast, o.undo ? 9000 : 6000);
+  }
+  T.addEventListener('click', (e) => {
+    if (e.target.closest('[data-t=undo]')) { const f = tUndo; hideToast(); if (f) f(); }
+    else if (e.target.closest('.tx')) hideToast();
+  });
+
+  /* ---------- List component ---------- */
+  const LISTS = {};
+  function makeList(key, cfg) {
+    const root = document.querySelector(`[data-list="${key}"]`);
+    if (!root) return null;
+    const S = {
+      items: cfg.items.map(clone), pool: (cfg.pool || []).map(clone), len: cfg.len || 10, mode: cfg.mode || 'inapp',
+      updated: cfg.updated || '5:42 a.m.', earlier: 0, busy: false, callStart: null, tick: null, focusNext: null,
+      ui: { exp: new Set(cfg.exp || []), panel: cfg.panel || null, why: cfg.why || null, flag: {}, flagWhy: {}, all: false, few: !!cfg.few, logform: !!cfg.logform, err: null, muted: false }
+    };
+    (cfg.sess || []).forEach((id) => { const it = S.items.find((x) => x.id === id); if (it) it.sess = true; });
+    const K = (s) => `${key}-${s}`;
+    const nm = (it) => esc(it.name);
+
+    function tierHTML(it) {
+      const on = it.tier === 'High' ? 3 : 2;
+      return `<span class="tierx"><span class="bars" aria-hidden="true">${[5, 8, 11].map((h, i) => `<i style="height:${h}px" class="${i < on ? '' : 'off'}"></i>`).join('')}</span>${it.tier}${it.shared ? '<span class="sr"> (team\'s highest score)</span>' : ''}</span>`;
+    }
+    function head() {
+      if (cfg.headless) return '';
+      const total = S.items.length, done = S.items.filter((x) => x.state === 'done').length, dis = S.items.filter((x) => x.state === 'dis').length;
+      const pct = (v) => total ? Math.round(v / total * 100) : 0;
+      const progT = `<b>${done} of ${total}</b> contacted${dis ? ` · ${dis} dismissed` : ''}${S.earlier ? ` · ${S.earlier} earlier today` : ''}`;
+      const bar = `<div class="bar thin" aria-hidden="true"><span style="width:${pct(done)}%;background:var(--green)"></span><span style="width:${pct(dis)}%;background:#BDBDBD"></span></div>`;
+      const fresh = `<span class="fresh"><span class="dot" style="background:var(--green)"></span><span>${S.busy ? 'Refreshing…' : `Updated <b>${S.updated}</b>`}</span><button type="button" class="icon-btn ${S.busy ? 'spin' : ''}" data-act="refresh" data-k="${K('refresh')}" aria-label="Refresh list" ${S.busy ? 'aria-disabled="true"' : ''}>${ic('refresh', 16, 2)}</button></span>`;
+      if (cfg.compact) {
+        return `<div class="mod-head"><div style="flex:1 1 180px;min-width:0"><h2 class="ct" id="${K('h')}">Clients to contact today</h2><div class="prog" style="margin-top:8px"><span class="prog-t">${progT}</span>${bar}</div></div>${fresh}</div>`;
+      }
+      const opts = Array.from({ length: 16 }, (_, i) => i + 5).map((v) => `<option value="${v}" ${v === S.len ? 'selected' : ''}>${v}</option>`).join('');
+      return `<div class="mod-head">
+        <div style="min-width:0"><h2 class="ct" id="${K('h')}">Today's clients to contact</h2><div class="cs">Ranked for you from home and browsing signals</div></div>
+        <div class="mod-tools">
+          <div class="prog"><span class="prog-t">${progT}</span>${bar}</div>
+          <label class="pillf"><span class="l">Show</span><select data-act="len" data-k="${K('len')}">${opts}</select></label>
+          ${fresh}
+        </div></div>`;
+    }
+
+    function actsHTML(it) {
+      const p = S.ui.panel && S.ui.panel.id === it.id ? S.ui.panel.kind : null;
+      const exp = S.ui.exp.has(it.id);
+      const chev = `<button type="button" class="act ico chev" data-act="toggle" data-id="${it.id}" data-k="${K('chev-' + it.id)}" aria-expanded="${exp}" aria-controls="${K('xp-' + it.id)}" aria-label="Details for ${nm(it)}">${ic('chev')}</button>`;
+      if (it.state !== 'open') {
+        const lbl = it.state === 'done' ? `${ic('check', 14, 2.4)}${esc(it.doneHow || 'Contacted')}` : `Dismissed${it.disWhy ? ' · ' + WHY[it.disWhy][0] : ''}`;
+        return `<div class="rec-acts"><span class="state-lbl">${lbl}</span>${it.sess ? `<button type="button" class="lnk" data-act="undo" data-id="${it.id}" data-k="${K('undo-' + it.id)}" aria-label="Undo for ${nm(it)}">Undo</button>` : ''}${chev}</div>`;
+      }
+      const callOn = p === 'call' || p === 'manual';
+      return `<div class="rec-acts">
+        <button type="button" class="act ${callOn ? 'on' : ''}" data-act="call" data-id="${it.id}" data-k="${K('call-' + it.id)}" aria-label="Call ${nm(it)}" title="Call" aria-expanded="${callOn}">${ic('phone')}<span class="lb">Call</span></button>
+        <button type="button" class="act ${p === 'text' ? 'on' : ''}" data-act="text" data-id="${it.id}" data-k="${K('text-' + it.id)}" aria-label="Text ${nm(it)}" title="Text" aria-expanded="${p === 'text'}">${ic('text')}<span class="lb">Text</span></button>
+        <button type="button" class="act ${p === 'email' ? 'on' : ''}" data-act="email" data-id="${it.id}" data-k="${K('email-' + it.id)}" aria-label="Email ${nm(it)}" title="Email" aria-expanded="${p === 'email'}">${ic('mail')}<span class="lb">Email</span></button>
+        <button type="button" class="act" data-act="mark" data-id="${it.id}" data-k="${K('mark-' + it.id)}" aria-label="Mark as called: ${nm(it)}" title="Mark as called">${ic('check')}<span class="lb">Mark as called</span></button>
+        <button type="button" class="act ico" data-act="dismiss" data-id="${it.id}" data-k="${K('dis-' + it.id)}" aria-label="Dismiss ${nm(it)}" title="Dismiss">${ic('x')}</button>
+        ${chev}</div>`;
+    }
+
+    function panelHTML(it) {
+      const p = S.ui.panel && S.ui.panel.id === it.id ? S.ui.panel.kind : null;
+      if (!p || it.state !== 'open') return '';
+      const f = esc(firstOf(it.name));
+      const err = S.ui.err && S.ui.err.id === it.id ? S.ui.err : null;
+      if (p === 'call') {
+        return `<div class="panel" role="group" aria-label="Call in progress with ${nm(it)}">
+          <div class="callbar"><span class="live" aria-hidden="true"></span><div><b>On a call with ${nm(it)}</b><div class="sub">${esc(it.phone)} · from your Compass number · <span data-timer>0:00</span></div></div><span class="sp"></span>
+            <button type="button" class="bar-btn" data-act="mute" data-id="${it.id}" data-k="${K('mute-' + it.id)}" aria-pressed="${S.ui.muted}">${S.ui.muted ? 'Unmute' : 'Mute'}</button>
+            <button type="button" class="btn-red" data-act="endcall" data-id="${it.id}" data-k="${K('end-' + it.id)}">${ic('phone')}End call</button></div>
+          <div class="comp"><div><label class="fl" for="${K('cn-' + it.id)}">Call notes (optional)</label><input class="field" id="${K('cn-' + it.id)}" data-draft="${K('cn-' + it.id)}" placeholder="e.g. Wants a CMA before spring"></div>
+          <div class="hint">${ic('info', 14)}When the call ends it's logged to ${f}'s timeline and ${f} is marked as contacted.${it.task ? ' The open task is completed too.' : ''}</div></div></div>`;
+      }
+      if (p === 'manual') {
+        const tel = '+1' + it.phone.replace(/\D/g, '');
+        return `<div class="panel"><div class="comp">
+          <div class="comp-h"><b>Call ${nm(it)} from your phone</b><span>In-app calling isn't set up on your account</span></div>
+          <a class="bignum" href="tel:${tel}" data-k="${K('tel-' + it.id)}">${ic('phone', 20)}${esc(it.phone)}</a>
+          <div class="comp-row"><span style="font-size:13px;color:var(--ink2)">After the call:</span>
+            <button type="button" class="btn" data-act="mark" data-id="${it.id}" data-k="${K('mmark-' + it.id)}">${ic('check')}Mark as called</button>
+            <button type="button" class="btn-ghost" data-act="logform" data-id="${it.id}" data-k="${K('logbtn-' + it.id)}" aria-expanded="${S.ui.logform}">Log call with notes</button>
+            <span class="sp"></span><button type="button" class="lnk" data-act="cancel" data-id="${it.id}">Cancel</button></div>
+          ${S.ui.logform ? `<div style="border-top:1px solid var(--line-soft);padding-top:12px;display:flex;flex-direction:column;gap:10px">
+            <fieldset class="out"><legend>Outcome</legend>
+              <label><input type="radio" name="${K('o-' + it.id)}" value="Talked" checked data-k="${K('o1-' + it.id)}">Talked</label>
+              <label><input type="radio" name="${K('o-' + it.id)}" value="Left voicemail">Left voicemail</label>
+              <label><input type="radio" name="${K('o-' + it.id)}" value="No answer">No answer</label></fieldset>
+            <div><label class="fl" for="${K('ln-' + it.id)}">Notes (optional)</label><textarea class="field" id="${K('ln-' + it.id)}" data-draft="${K('ln-' + it.id)}" rows="2" placeholder="What did you talk about?"></textarea></div>
+            <div class="comp-row"><button type="button" class="btn" data-act="savelog" data-id="${it.id}">Save call log</button><span class="hint">Whether voicemail and no answer count as contacted is <span class="tbd">[TBD]</span>.</span></div></div>` : ''}
+          <div class="hint">${ic('info', 14)}Either option logs a call to ${f}'s timeline and marks ${f} as contacted. <a href="#">Set up in-app calling</a> to log calls automatically.</div>
+        </div></div>`;
+      }
+      if (p === 'text') {
+        return `<div class="panel"><div class="comp">
+          <div class="comp-h"><b>Text ${nm(it)}</b><span>To ${esc(it.phone)} · from your Compass number (201) 555-0100</span></div>
+          <div><label class="fl" for="${K('ta-' + it.id)}">Message</label><textarea class="field" id="${K('ta-' + it.id)}" data-draft="${K('ta-' + it.id)}" data-k="${K('ta-' + it.id)}" data-cnt-for="${K('cnt-' + it.id)}" placeholder="Write a message" ${err ? `aria-invalid="true" aria-describedby="${K('err-' + it.id)}"` : ''}></textarea>
+          ${err ? `<div class="err" id="${K('err-' + it.id)}">${ic('warn', 14, 2)}${err.msg}</div>` : ''}</div>
+          <div class="comp-row"><button type="button" class="btn-ghost">Insert template</button><span class="cnt" id="${K('cnt-' + it.id)}">0 / 160</span><span class="sp"></span>
+            <button type="button" class="btn-ghost" data-act="cancel" data-id="${it.id}">Cancel</button><button type="button" class="btn" data-act="sendtext" data-id="${it.id}">Send text</button></div>
+          <div class="hint">${ic('info', 14)}Sent texts are logged to the timeline and mark ${f} as contacted.</div>
+        </div></div>`;
+      }
+      if (p === 'email') {
+        return `<div class="panel"><div class="comp">
+          <div class="comp-h"><b>Email ${nm(it)}</b><span>To ${esc(it.email)} · from marcus.lee@example.com</span></div>
+          <div><label class="fl" for="${K('su-' + it.id)}">Subject</label><input class="field" id="${K('su-' + it.id)}" data-draft="${K('su-' + it.id)}" data-k="${K('su-' + it.id)}" placeholder="Subject"></div>
+          <div><label class="fl" for="${K('eb-' + it.id)}">Message</label><textarea class="field" id="${K('eb-' + it.id)}" data-draft="${K('eb-' + it.id)}" data-k="${K('eb-' + it.id)}" rows="4" placeholder="Write your email" ${err ? `aria-invalid="true" aria-describedby="${K('err-' + it.id)}"` : ''}></textarea>
+          ${err ? `<div class="err" id="${K('err-' + it.id)}">${ic('warn', 14, 2)}${err.msg}</div>` : ''}</div>
+          <div class="comp-row"><button type="button" class="btn-ghost">Insert template</button><button type="button" class="btn-ghost">Attach</button><span class="sp"></span>
+            <button type="button" class="btn-ghost" data-act="cancel" data-id="${it.id}">Cancel</button><button type="button" class="btn" data-act="sendemail" data-id="${it.id}">Send email</button></div>
+          <div class="hint">${ic('info', 14)}<span>A sent email is logged to the timeline and marks ${f} as contacted <span class="tbd">[TBD]</span> (proposed: yes).</span></div>
+        </div></div>`;
+      }
+      return '';
+    }
+
+    function whyHTML(it) {
+      if (S.ui.why !== it.id || it.state !== 'dis') return '';
+      const v = it.disWhy, f = esc(firstOf(it.name));
+      const note = v ? WHY[v][1] : `Off today's list. ${firstOf(it.name)} stays your client: dismissing never reassigns a contact.`;
+      const warn = v === 'not_mine';
+      return `<div class="why" role="group" aria-labelledby="${K('wh-' + it.id)}">
+        <div class="why-h" id="${K('wh-' + it.id)}">${f} dismissed. Tell us why? <span>(optional)</span></div>
+        <div class="rchips">${Object.keys(WHY).map((k) => `<button type="button" class="rchip" data-act="why" data-v="${k}" data-id="${it.id}" data-k="${K('w-' + k + '-' + it.id)}" aria-pressed="${v === k}">${ic('check', 14, 2.4)}${WHY[k][0]}</button>`).join('')}</div>
+        <p class="why-note" style="${warn ? 'color:var(--amber-ink)' : ''}">${ic(warn ? 'warn' : 'info', 16, 2)}<span>${tbd(note)}</span></p>
+        <div class="comp-row"><button type="button" class="btn-sm" data-act="whydone" data-id="${it.id}" data-k="${K('wd-' + it.id)}">Done</button><button type="button" class="lnk" data-act="undo" data-id="${it.id}">Undo dismiss</button></div>
+      </div>`;
+    }
+
+    function expHTML(it) {
+      if (!S.ui.exp.has(it.id)) return '';
+      const src = SRC[it.src] || SRC.ai;
+      const fl = S.ui.flag[it.id];
+      const flagW = S.ui.flagWhy[it.id];
+      const f = esc(firstOf(it.name));
+      return `<div class="panel" id="${K('xp-' + it.id)}">
+        <div class="xp">
+          <section aria-label="Contact details"><h3 class="kpi-label">Contact</h3><div class="kv">
+            ${ic('phone', 14)}<a href="tel:+1${it.phone.replace(/\D/g, '')}">${esc(it.phone)}</a>
+            ${ic('mail', 14)}<a href="mailto:${esc(it.email)}">${esc(it.email)}</a>
+            ${ic('pin', 14)}<span>${esc(it.addr)}</span></div></section>
+          <section aria-label="Recent activity"><h3 class="kpi-label">Recent activity</h3><ul class="acts-log">${it.activity.map(([w, t]) => `<li><span class="when">${w}</span><span>${esc(t)}</span></li>`).join('')}</ul></section>
+          <section aria-label="AI client summary" style="grid-column:1/-1">${it.summary
+            ? `<div class="ai-say"><div class="k">${ic('spark', 14)}AI client summary</div>${esc(it.summary)}</div>`
+            : `<div class="ai-say" style="background:var(--line-soft)"><div class="k" style="color:var(--ink3)">AI client summary</div><span style="color:var(--ink3)">No summary yet for ${f}. Summaries need a few logged conversations or emails.</span></div>`}</section>
+        </div>
+        ${it.task ? `<div class="xp-sec"><div class="task-box"><span class="ti">${ic('task', 14)}</span><div><b style="font-weight:600">Open task: ${esc(it.task.t)}</b> · ${esc(it.task.due)}<div style="font-size:12px;color:var(--ink3)">Contacting ${f} from this list completes this task too.</div></div></div></div>` : ''}
+        ${it.shared && it.shared.by ? `<div class="xp-sec" style="background:var(--amber-bg)"><div class="task-box"><span class="ti" style="background:#fff">${ic('team', 14)}</span><div><b style="font-weight:600">${esc(it.shared.by)} ${it.shared.how} ${f} today at ${it.shared.at}</b><div style="font-size:12px;color:var(--ink2)">Logged on the shared timeline. Check with ${esc(firstOf(it.shared.by))} before reaching out.</div></div></div></div>` : ''}
+        <div class="xp-foot">
+          <span class="src">${ic(src[0], 14)}<span>${tbd(src[1])}</span></span>
+          ${fl ? `<span class="flagged" role="status">${ic('check', 14, 2.4)}Thanks. We flagged this reason for review. ${f} stays on your list.
+              <span style="display:inline-flex;flex-wrap:wrap;gap:6px" role="group" aria-label="What's wrong? Optional">${['Out of date', 'Not accurate', 'Other'].map((w) => `<button type="button" class="mini-chip" data-act="flagwhy" data-v="${w}" data-id="${it.id}" data-k="${K('fw-' + w + it.id)}" aria-pressed="${flagW === w}">${w}</button>`).join('')}</span>
+              <button type="button" class="lnk" data-act="flagundo" data-id="${it.id}" style="font-size:12px">Undo</button></span>`
+            : `<button type="button" class="btn-sm muted" data-act="flag" data-id="${it.id}" data-k="${K('flag-' + it.id)}">${ic('flag', 14)}This reason is wrong</button>`}
+          <a href="#" style="font-size:13px;font-weight:500;display:inline-flex;align-items:center;gap:4px">View full profile ${ic('ext', 14)}</a>
+        </div></div>`;
+    }
+
+    function itemHTML(it, i) {
+      const cls = ['rec', it.state === 'done' ? 'done' : '', it.state === 'dis' ? 'dis' : '', it.isNew ? 'new' : ''].join(' ');
+      const chips = it.sig.map((s) => `<span class="sig ${s}">${ic(SIG[s][1], 13)}${SIG[s][0]}</span>`).join('');
+      const pill = it.state === 'done' ? '<span class="pill sm t-green">Contacted</span>' : it.state === 'dis' ? '<span class="pill sm t-grey">Dismissed</span>' : it.isNew ? '<span class="pill sm t-blue">New</span>' : '';
+      const meta = [];
+      if (it.shared && it.shared.by) meta.push(`<span class="pill sm t-amber">${ic('team', 12, 2)}Teammate contacted today</span><span>${esc(it.shared.by)} ${it.shared.how} at ${it.shared.at}</span>`);
+      if (it.shared) meta.push(`<span class="meta-i">${ic('team', 13)}Shared with ${it.shared.n} teammate${it.shared.n > 1 ? 's' : ''} · team's highest score</span>`);
+      if (it.task && it.state === 'open') meta.push(`<span class="meta-i">${ic('task', 13)}Open task: ${esc(it.task.t)} · <b>${esc(it.task.due)}</b></span>`);
+      if (it.src === 'fallback') meta.push(`<span class="meta-i">${ic('tmpl', 13)}Standard reason</span>`);
+      if (it.src === 'none') meta.push(`<span class="meta-i">${ic('info', 13)}Reason unavailable today</span>`);
+      const reason = it.reason ? `<p class="rec-why">${esc(it.reason)}</p>` : `<p class="rec-why na">We couldn't load a reason for ${esc(firstOf(it.name))} today. ${it.sig[0] === 'buy' ? 'Recent browsing activity' : 'Recent home and market activity'} put them on your list.</p>`;
+      return `<li class="${cls}">
+        <div class="rec-row">
+          <span class="rank" aria-hidden="true">${i + 1}</span>
+          <span class="av" aria-hidden="true">${esc(it.ini)}</span>
+          <div class="rec-main">
+            <div class="rec-top"><button type="button" class="rec-name" data-act="toggle" data-id="${it.id}" data-k="${K('nm-' + it.id)}" aria-expanded="${S.ui.exp.has(it.id)}" aria-controls="${K('xp-' + it.id)}">${nm(it)}</button>${chips}${tierHTML(it)}${pill}</div>
+            ${reason}
+            ${meta.length ? `<div class="rec-meta">${meta.join('')}</div>` : ''}
+          </div>
+          ${actsHTML(it)}
+        </div>
+        ${panelHTML(it)}${whyHTML(it)}${expHTML(it)}
+      </li>`;
+    }
+
+    function bodyHTML() {
+      let h = '';
+      const all = S.items;
+      const worked = all.length && all.every((x) => x.state !== 'open');
+      if (worked && !S.pool.length && !cfg.headless) {
+        h += `<div class="banner ok" role="status"><span class="bi">${ic('check', 16, 2.4)}</span><div><b style="font-weight:600">All done for today.</b> You've worked every client on today's list, and there are no more suggestions today. Tomorrow's list arrives by 6 a.m.</div></div>`;
+      }
+      const shown = cfg.compact && !S.ui.all ? all.slice(0, 5) : all;
+      h += `<ol class="recs" ${cfg.headless ? 'aria-label="Example item"' : `aria-labelledby="${K('h')}"`}>${shown.map(itemHTML).join('')}</ol>`;
+      if (!cfg.headless && all.length < S.len && !S.pool.length && !worked) {
+        h += `<div class="fewer"><b>Showing ${all.length} of ${S.len}.</b> That's everyone with a fresh signal today. <button type="button" class="lnk" data-act="whyfew" data-k="${K('few')}" aria-expanded="${S.ui.few}" aria-controls="${K('fewd')}">Why so few?</button>
+          <div id="${K('fewd')}" ${S.ui.few ? '' : 'hidden'}><ul><li>We only list clients with a recent home or browsing signal.</li><li>We skip anyone contacted in the past 7 days, dismissed, snoozed, archived or marked Do Not Contact.</li><li>Adding clients' home addresses and inviting them to Compass gives us more to work with.</li></ul></div></div>`;
+      }
+      if (cfg.compact) {
+        h += `<div class="mod-foot">${all.length > 5 ? `<button type="button" class="lnk" data-act="showall" data-k="${K('all')}" aria-expanded="${S.ui.all}">${S.ui.all ? 'Show top 5' : `Show all ${all.length}`}</button>` : '<span></span>'}<a href="#dashboard">Open full list on Dashboard →</a></div>`;
+      }
+      return h;
+    }
+
+    function timer() {
+      clearInterval(S.tick);
+      if (S.ui.panel && S.ui.panel.kind === 'call') {
+        if (!S.callStart) S.callStart = Date.now() - (cfg.callElapsed || 0) * 1000;
+        const upd = () => { const el = root.querySelector('[data-timer]'); if (el) el.textContent = fmt(Math.floor((Date.now() - S.callStart) / 1000)); };
+        upd(); S.tick = setInterval(upd, 1000);
+      } else S.callStart = null;
+    }
+
+    function render() {
+      const act = document.activeElement;
+      const focusK = act && root.contains(act) ? act.dataset.k : null;
+      const drafts = {};
+      $$('[data-draft]', root).forEach((el) => { drafts[el.dataset.draft] = el.value; });
+      root.innerHTML = head() + bodyHTML();
+      $$('[data-draft]', root).forEach((el) => { if (drafts[el.dataset.draft] != null) el.value = drafts[el.dataset.draft]; updCnt(el); });
+      const want = S.focusNext || focusK; S.focusNext = null;
+      if (want) { const el = root.querySelector(`[data-k="${want}"]`); if (el) el.focus({ preventScroll: true }); }
+      timer();
+    }
+    function updCnt(el) { if (el.dataset.cntFor) { const c = document.getElementById(el.dataset.cntFor); if (c) c.textContent = `${el.value.length} / 160`; } }
+
+    function openPanel(id, kind) {
+      if (S.ui.panel && S.ui.panel.id === id && S.ui.panel.kind === kind) { closePanel(); S.focusNext = K((kind === 'manual' ? 'call' : kind) + '-' + id); return; }
+      S.ui.panel = { id, kind }; S.ui.logform = false; S.ui.err = null; S.callStart = null; S.ui.muted = false;
+      S.focusNext = K({ call: 'end-', manual: 'tel-', text: 'ta-', email: 'su-' }[kind] + id);
+    }
+    function closePanel() { S.ui.panel = null; S.ui.logform = false; S.ui.err = null; }
+    function contact(it, how) { it.state = 'done'; it.doneHow = how; it.sess = true; if (S.ui.panel && S.ui.panel.id === it.id) closePanel(); }
+    function reopen(it) { it.state = 'open'; it.doneHow = null; it.disWhy = null; it.sess = false; if (S.ui.why === it.id) S.ui.why = null; }
+    function undoable(it) { return () => { reopen(it); S.focusNext = K('nm-' + it.id); render(); toast('Undone', { sub: `${esc(firstOf(it.name))} is back on your list. The timeline entry was removed.` }); }; }
+
+    function refresh() {
+      if (S.busy) return;
+      S.busy = true; render();
+      setTimeout(() => {
+        S.busy = false;
+        const worked = S.items.filter((x) => x.state !== 'open');
+        const open = S.items.filter((x) => x.state === 'open');
+        S.earlier += worked.filter((x) => x.state === 'done').length;
+        S.items.forEach((x) => { x.isNew = false; });
+        const add = S.pool.splice(0, Math.max(0, S.len - open.length)).map((x) => Object.assign(clone(x), { isNew: true }));
+        S.items = open.concat(add);
+        S.ui.why = null; if (S.ui.panel && !S.items.find((x) => x.id === S.ui.panel.id)) closePanel();
+        S.updated = 'just now'; S.focusNext = K('refresh');
+        render();
+        if (add.length) toast(`${add.length} new client${add.length > 1 ? 's' : ''} added from today's pool`, { sub: S.pool.length ? `${S.pool.length} more left today.` : 'That\'s everyone for today.' });
+        else if (worked.length) toast('Cleared the clients you worked', { sub: 'No new names left in today\'s pool. Tomorrow\'s list arrives by 6 a.m.' });
+        else toast('No new clients right now', { sub: 'Your list is up to date.' });
+      }, 1100);
+    }
+
+    function setLen(v) {
+      S.len = v;
+      if (S.items.length < v) {
+        const add = S.pool.splice(0, v - S.items.length).map((x) => Object.assign(clone(x), { isNew: true }));
+        S.items = S.items.concat(add);
+        toast(`Showing up to ${v} a day`, { sub: add.length ? `Added ${add.length} from today's pool.` : 'No more clients in today\'s pool right now.' });
+      } else if (S.items.length > v) {
+        let extra = S.items.length - v;
+        for (let i = S.items.length - 1; i >= 0 && extra > 0; i--) {
+          if (S.items[i].state === 'open') { const r = S.items.splice(i, 1)[0]; r.isNew = false; S.pool.unshift(r); extra--; }
+        }
+        toast(`Showing up to ${v} a day`, { sub: 'Clients you\'ve already worked stay until you refresh.' });
+      } else toast(`Showing up to ${v} a day`);
+      S.focusNext = K('len'); render();
+    }
+
+    root.addEventListener('click', (e) => {
+      const b = e.target.closest('[data-act]');
+      if (!b || !root.contains(b) || b.tagName === 'SELECT') return;
+      const a = b.dataset.act, id = b.dataset.id, it = S.items.find((x) => x.id === id);
+      const f = it ? esc(firstOf(it.name)) : '';
+      switch (a) {
+        case 'toggle': if (S.ui.exp.has(id)) S.ui.exp.delete(id); else S.ui.exp.add(id); S.focusNext = b.dataset.k; break;
+        case 'call': openPanel(id, S.mode === 'inapp' ? 'call' : 'manual'); break;
+        case 'text': openPanel(id, 'text'); break;
+        case 'email': openPanel(id, 'email'); break;
+        case 'cancel': { const k = S.ui.panel ? S.ui.panel.kind : 'call'; closePanel(); S.focusNext = K((k === 'manual' ? 'call' : k) + '-' + id); break; }
+        case 'mute': S.ui.muted = !S.ui.muted; S.focusNext = b.dataset.k; break;
+        case 'logform': S.ui.logform = !S.ui.logform; S.focusNext = S.ui.logform ? K('o1-' + id) : b.dataset.k; break;
+        case 'endcall': {
+          const secs = Math.max(1, Math.floor((Date.now() - (S.callStart || Date.now())) / 1000));
+          contact(it, `Called just now · ${fmt(secs)}`); S.focusNext = K('nm-' + id); render();
+          toast(`Call logged (${fmt(secs)}) · ${f} marked as contacted`, { sub: `Added to the timeline automatically.${it.task ? ' Open task completed.' : ''}` });
+          return;
+        }
+        case 'sendtext': case 'sendemail': {
+          const ta = root.querySelector(`#${CSS.escape(K((a === 'sendtext' ? 'ta-' : 'eb-') + id))}`);
+          if (!ta || !ta.value.trim()) { S.ui.err = { id, msg: 'Write a message before sending.' }; S.focusNext = K((a === 'sendtext' ? 'ta-' : 'eb-') + id); break; }
+          contact(it, a === 'sendtext' ? 'Texted just now' : 'Emailed just now'); S.focusNext = K('nm-' + id); render();
+          toast(`${a === 'sendtext' ? 'Text' : 'Email'} sent · ${f} marked as contacted`, { sub: 'Logged to the contact timeline.' + (a === 'sendemail' ? ' Email counting as contacted is [TBD].' : '') });
+          return;
+        }
+        case 'mark': case 'savelog': {
+          let how = 'Marked as called just now';
+          if (a === 'savelog') { const r = root.querySelector(`input[name="${K('o-' + id)}"]:checked`); how = `Call logged just now · ${r ? r.value : 'Talked'}`; }
+          contact(it, how); S.focusNext = K('nm-' + id); render();
+          toast(a === 'mark' ? `Marked as called · logged to ${f}'s timeline` : `Call logged to ${f}'s timeline`, { sub: 'If you also log this call on the profile within <span style="color:#FFE08A;font-weight:600">[TBD] minutes</span>, we keep one entry, not two.', undo: undoable(it) });
+          return;
+        }
+        case 'dismiss':
+          if (S.ui.panel && S.ui.panel.id === id) closePanel();
+          it.state = 'dis'; it.disWhy = null; it.sess = true; S.ui.why = id; S.focusNext = K('w-not_now-' + id); render();
+          toast(`${f} dismissed`, { sub: 'Still your client. Dismissing doesn\'t reassign anyone.', undo: undoable(it) });
+          return;
+        case 'why': it.disWhy = it.disWhy === b.dataset.v ? null : b.dataset.v; S.focusNext = b.dataset.k; break;
+        case 'whydone': S.ui.why = null; S.focusNext = K('undo-' + id); break;
+        case 'undo': reopen(it); S.focusNext = K('nm-' + id); break;
+        case 'flag': S.ui.flag[id] = true; S.focusNext = K('fw-Out of date' + id); break;
+        case 'flagwhy': S.ui.flagWhy[id] = S.ui.flagWhy[id] === b.dataset.v ? null : b.dataset.v; S.focusNext = b.dataset.k; break;
+        case 'flagundo': delete S.ui.flag[id]; delete S.ui.flagWhy[id]; S.focusNext = K('flag-' + id); break;
+        case 'refresh': refresh(); return;
+        case 'showall': S.ui.all = !S.ui.all; S.focusNext = b.dataset.k; break;
+        case 'whyfew': S.ui.few = !S.ui.few; S.focusNext = b.dataset.k; break;
+        default: return;
+      }
+      render();
+    });
+    root.addEventListener('change', (e) => { if (e.target.dataset.act === 'len') setLen(+e.target.value); });
+    root.addEventListener('input', (e) => { updCnt(e.target); if (S.ui.err && e.target.value.trim()) { S.ui.err = null; e.target.removeAttribute('aria-invalid'); const er = root.querySelector('.err'); if (er) er.remove(); } });
+    root.addEventListener('keydown', (e) => {
+      if (e.key !== 'Escape') return;
+      if (S.ui.panel) { const p = S.ui.panel; closePanel(); S.focusNext = K((p.kind === 'manual' ? 'call' : p.kind) + '-' + p.id); render(); }
+      else if (S.ui.why) { const id = S.ui.why; S.ui.why = null; S.focusNext = K('undo-' + id); render(); }
+    });
+
+    S.render = render;
+    S.setMode = (m) => { S.mode = m; closePanel(); render(); };
+    S.replay = () => { S.items.forEach((x, i) => { if (cfg.newIds && cfg.newIds.includes(x.id)) x.isNew = true; }); render(); };
+    render();
+    LISTS[key] = S;
+    return S;
+  }
+
+  /* ---------- Instances ---------- */
+  const set = (arr, id, patch) => arr.map((x) => x.id === id ? Object.assign(clone(x), patch) : x);
+  makeList('dash', { items: BASE, pool: POOL });
+  makeList('home', { items: BASE, pool: POOL, compact: true });
+  makeList('exp', { items: BASE, pool: POOL, exp: ['r1'] });
+  makeList('act', { items: BASE, pool: POOL, panel: { id: 'r1', kind: 'call' }, callElapsed: 47 });
+  makeList('snap-text', { items: [BASE[0]], headless: true, panel: { id: 'r1', kind: 'text' } });
+  makeList('snap-email', { items: [BASE[2]], headless: true, panel: { id: 'r3', kind: 'email' } });
+  makeList('snap-done', { items: set([BASE[0]], 'r1', { state: 'done', doneHow: 'Called just now · 2:14' }), headless: true, sess: ['r1'] });
+  makeList('snap-manual', { items: [BASE[5]], headless: true, mode: 'manual', panel: { id: 'r6', kind: 'manual' } });
+  makeList('snap-log', { items: [BASE[3]], headless: true, mode: 'manual', panel: { id: 'r4', kind: 'manual' }, logform: true });
+  makeList('snap-mark', { items: set([BASE[5]], 'r6', { state: 'done', doneHow: 'Marked as called just now' }), headless: true, sess: ['r6'] });
+  makeList('dis', { items: set(BASE, 'r1', { state: 'dis', disWhy: null }), pool: POOL, why: 'r1', sess: ['r1'] });
+  makeList('team', { items: TEAM, pool: POOL, len: 10, exp: ['t2'] });
+  const backIds = ['p1', 'p2', 'p3'];
+  makeList('st-backfill', { items: byId(BASE, ['r1', 'r3', 'r4', 'r6', 'r10']).concat(POOL.map((x) => Object.assign(clone(x), { isNew: true }))), pool: [], updated: 'just now', newIds: backIds });
+  makeList('st-fewer', { items: byId(BASE, ['r1', 'r3', 'r6', 'r10']).concat(set(byId(BASE, ['r2']), 'r2', {})), pool: [], few: true });
+  makeList('st-done', { items: byId(BASE, ['r2', 'r5', 'r7', 'r9']).concat(set(byId(BASE, ['r8']), 'r8', {})), pool: [], len: 5 });
+  makeList('st-fallback', { items: [set([BASE[5]], 'r6', { src: 'fallback', reason: 'Owned this home 11 years, and homes nearby have sold recently.' })[0], set([BASE[9]], 'r10', { src: 'none', reason: null })[0]], pool: [], len: 2, exp: ['r6'] });
+
+  /* Skeleton rows */
+  $('#sk-rows').innerHTML = Array.from({ length: 5 }, () => `<div class="rec-row" style="border-bottom:1px solid var(--line-soft)"><span></span><span class="sk av" style="background-size:200% 100%"></span><div><div class="sk" style="width:46%;height:14px"></div><div class="sk" style="width:88%;height:11px;margin-top:8px"></div><div class="sk" style="width:64%;height:11px;margin-top:6px"></div></div><div class="sk" style="width:120px;height:32px"></div></div>`).join('');
+  $('#replay').addEventListener('click', () => LISTS['st-backfill'].replay());
+
+  /* Mode toggle on Actions */
+  $$('#mode-seg button').forEach((b) => b.addEventListener('click', () => {
+    $$('#mode-seg button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+    LISTS.act.setMode(b.dataset.mode);
+    toast(b.dataset.mode === 'inapp' ? 'Previewing an agent with in-app calling' : 'Previewing an agent who calls from their own phone', { sub: 'Select Call on any open item to see the difference.' });
+  }));
+
+  /* Settings */
+  const rng = $('#len-range'), out = $('#len-out');
+  const setR = (v) => { rng.value = v; out.textContent = v; $('#len-saved').textContent = ''; $$('[data-len]').forEach((b) => b.classList.toggle('blue', +b.dataset.len === +v)); };
+  rng.addEventListener('input', () => setR(rng.value));
+  $$('[data-len]').forEach((b) => b.addEventListener('click', () => setR(b.dataset.len)));
+  $('#len-reset').addEventListener('click', () => setR(10));
+  $('#len-save').addEventListener('click', () => { $('#len-saved').textContent = `Saved. Your list now holds up to ${rng.value} clients a day.`; });
+  setR(10);
+
+  /* ---------- Routing ---------- */
+  const SCREENS = $$('.screen').map((s) => s.dataset.screen);
+  function show(name) {
+    if (!SCREENS.includes(name)) name = 'dashboard';
+    let navOn = null;
+    $$('.screen').forEach((s) => { const on = s.dataset.screen === name; s.hidden = !on; if (on) navOn = s.dataset.navOn || null; });
+    $$('.left-nav [data-nav]').forEach((a) => {
+      const on = a.dataset.nav === navOn || (a.dataset.nav === 'contacts' && navOn === 'dashboard');
+      a.classList.toggle('on', on);
+      if (a.dataset.nav === navOn) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+    });
+    $$('.switcher a').forEach((a) => { if (a.getAttribute('href') === '#' + name) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
+    window.scrollTo(0, 0);
+  }
+  /* PM review: priority filter */
+  const pmq = $('#pm-questions');
+  function filterPM(f) {
+    $$('#pmq-filter button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.f === f)));
+    let shown = 0;
+    $$('details.th', pmq).forEach((d) => {
+      const qs = $$('.qi', d);
+      if (!qs.length) return;
+      let vis = 0;
+      qs.forEach((q) => { const on = f === 'all' || q.dataset.pri === f; q.hidden = !on; if (on) vis++; });
+      d.hidden = vis === 0; shown += vis;
+      if (f !== 'all' && vis) d.open = true;
+    });
+    $('#pmq-empty').hidden = shown > 0;
+    $('#pmq-count').textContent = f === 'all' ? '' : `Showing ${shown} of 58`;
+  }
+  $$('#pmq-filter button').forEach((b) => b.addEventListener('click', () => filterPM(b.dataset.f)));
+
+  function goSub(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    if (el.hidden) filterPM('all');
+    const d = el.closest('details'); if (d) d.open = true;
+    requestAnimationFrame(() => {
+      el.scrollIntoView({ block: 'start' });
+      el.setAttribute('tabindex', '-1'); el.focus({ preventScroll: true });
+      el.classList.add('hl'); setTimeout(() => el.classList.remove('hl'), 2200);
+    });
+  }
+  function route() {
+    const [screen, sub] = (location.hash.replace('#', '') || 'dashboard').split('/');
+    show(screen);
+    if (sub) goSub(sub);
+  }
+  document.addEventListener('click', (e) => { const a = e.target.closest('a[href*="/"]'); if (a && a.getAttribute('href') === location.hash) { e.preventDefault(); route(); } });
+  $$('a[href="#"]').forEach((a) => a.addEventListener('click', (e) => e.preventDefault()));
+  document.addEventListener('click', (e) => { const a = e.target.closest('main a[href="#"]'); if (a) e.preventDefault(); });
+  window.addEventListener('hashchange', route);
+  route();
+})();
+</script>
+</body>
+</html>
